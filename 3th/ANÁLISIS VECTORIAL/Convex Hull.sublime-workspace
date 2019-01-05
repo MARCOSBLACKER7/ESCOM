@@ -1,0 +1,717 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Exce",
+				"exceeded"
+			],
+			[
+				"n",
+				"Network"
+			],
+			[
+				"T",
+				"T"
+			],
+			[
+				"val",
+				"val_1"
+			],
+			[
+				"win",
+				"WINAPI"
+			],
+			[
+				"v",
+				"val_2"
+			],
+			[
+				"va",
+				"val_1"
+			],
+			[
+				"man",
+				"manHilo"
+			],
+			[
+				"U",
+				"UR"
+			],
+			[
+				"sig_da",
+				"sig_datashift"
+			],
+			[
+				"shift",
+				"SHIFT_AMT"
+			],
+			[
+				"read",
+				"read_data_2"
+			],
+			[
+				"hijo",
+				"hijos"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"data",
+				"data_shift"
+			],
+			[
+				"da",
+				"data_shift"
+			],
+			[
+				"std",
+				"stdio.h\tstandard header"
+			],
+			[
+				"e",
+				"EAX"
+			],
+			[
+				"st",
+				"STDOUT"
+			],
+			[
+				"class",
+				"classIP"
+			],
+			[
+				"B",
+				"BROADCAST"
+			],
+			[
+				"u",
+				"u"
+			],
+			[
+				"CONSTRAIN",
+				"CONSTRAINT_NAME"
+			],
+			[
+				"Insertar",
+				"InsertaPerros"
+			],
+			[
+				"INSTR",
+				"INSTRUCTOR_ESTUDIANTE"
+			],
+			[
+				"INSTRU",
+				"INSTRUCTOR_CURSO"
+			],
+			[
+				"and",
+				"AND"
+			],
+			[
+				"T1",
+				"t1"
+			],
+			[
+				"EVALUAR",
+				"evaluar"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"bt",
+				"botones"
+			],
+			[
+				"FORM",
+				"FROM"
+			],
+			[
+				"cours",
+				"course_no"
+			],
+			[
+				"cour",
+				"course_no"
+			],
+			[
+				"instr",
+				"instructor_id"
+			],
+			[
+				"sect",
+				"section_no"
+			],
+			[
+				"c_deploy",
+				"c_deploy_fecha_2"
+			],
+			[
+				"deplo",
+				"deploy_fecha_2"
+			],
+			[
+				"c_",
+				"c_deploy_fecha_2"
+			],
+			[
+				"from",
+				"FROM"
+			],
+			[
+				"fromat",
+				"format"
+			],
+			[
+				"COL",
+				"column"
+			],
+			[
+				"TABLE_",
+				"TABLE_NAME"
+			],
+			[
+				"TABLE",
+				"TABLE_NAME"
+			],
+			[
+				"area",
+				"area_of_triangle"
+			],
+			[
+				"_angle",
+				"_angle_to_point"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/marco/Documents/Downloads/pila.vhd",
+			"settings":
+			{
+				"buffer_size": 1885,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/marco/OneDrive/Escritorio/finalBossChipscope/bubble.asm",
+			"settings":
+			{
+				"buffer_size": 1762,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/finalBoss/src/program_memory.vhd",
+			"settings":
+			{
+				"buffer_size": 4630,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Java/JavaC.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: lis",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: add",
+				"Package Control: Add Repository"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"contro",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTALL ",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAASM"
+	],
+	"file_history":
+	[
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/FINALBOSS3/finalBoss/src/main.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/procesador_Alan/procesador/condicion.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/procesador_Alan/procesador/control.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/procesador_Alan/procesador/paquete_control.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/procesador_Alan/procesador/mem_funcion.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/procesador_Alan/procesador/mem_operacion.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/Equipo5/MICROPACKET.vhd",
+		"/C/Users/marco/Documents/Downloads/counter_tb.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/Equipo5/MicroFinal.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/ESCOMIPS/PRINCIPAL_CONTROL.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/ESCOMIPS/UNIDAD_CONTROL.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/Memory.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/ESCOMIPS/OPERACION.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MP/PROGRAMA.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAAASM/PRINCIPAL.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/REDES/analizador_2.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/stack.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/control.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/UCTRL/CONTROL.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/control_unit.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/file_register.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/ALU.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAAASM/CONTROL.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ProgramMem/Memory.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/data_memory2/DIST_RAM.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/ESCOMIPS/MEMORIA_PROGRAMA.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/ESCOMIPS/MEMORIA_DATOS.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/ESCOMIPS_ALL.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/MICRO_COMPLETO/control_components.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/NIVEL.VHD",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/arith.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/stack/src/dist_ram_double_port.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/computerArchitecture-master/file_register_2/src/file_register.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/stack/src/stack.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 7/hijo.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 7/matriz.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 7/padre.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 7/Windows.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/REDES/analizadorLLC.c",
+		"/C/Users/marco/Documents/Downloads/CONDICION.vhdl",
+		"/C/Users/marco/Documents/Downloads/INSTRUCCION.vhdl",
+		"/C/Users/marco/Documents/ESCOM/OTROS/Pack Rikolino FULL Arqui/Arquitectura/Practicas/Control FULL/UDC.vhd",
+		"/C/Users/marco/Documents/Downloads/Genetico-1.java",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAASM/CONSTRAINTS.ucf",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 6/programahijo.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 6/programapadre.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/REDES/analizador.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/control_components.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/control.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/mem_opcode.vhd",
+		"/C/Users/marco/Documents/Downloads/CONT_DECO.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/TB_UnidadControl.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/TB_control.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/opcode_definitions.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/mem_fun.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/vhds/control_unit.vhd",
+		"/C/Users/marco/AppData/Local/Temp/Rar$DIa10172.36262/Carta.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/Pack Rikolino FULL Arqui/Arquitectura/Arquitectura/PACK/P8-CHIDA/Carta.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 6/programa1.c",
+		"/E/UCFCONT.ucf",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/RESTRICCIONES.ucf",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/REGISTRO.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/PRINCIPAL.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAASM/MI_PAQUETAXO.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/MI_PAQUETE.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAASM/PRINCIPAL.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/CONTROL.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAASM/UNIDAD.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAASM/CONTADOR.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/CONTADOR.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/BCD27SEG.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/CARTAASM/CONVERTIDOR.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/CONSTRAINTS.ucf",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/cartaASM/MIPAQUETE.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/file_register/file_register.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 5/hilowindows.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/file_register/file_register/file_reg.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/REDES/Subnetting.py",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/file_register/file_register/results.txt",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 4/arboldeprocesos.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 4/CodigoExacto_2.c",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 4/CodigoExacto_1.c",
+		"/C/Users/marco/Documents/Downloads/Subnetting.py",
+		"/C/Users/marco/Documents/Downloads/even.asm",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/ALU.vhd",
+		"/C/Users/marco/Documents/ESCOM/OTROS/Pack Rikolino FULL Arqui/Arquitectura/Practicas/P5/Practica5 AARON/DataMemory.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/TestBench.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/data_memory2/TestBench.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 3/longitudwindows.asm",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/PRÁCTICA 3/concatenadiez.asm",
+		"/C/Users/marco/OneDrive/Escritorio/Arquitectura.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/DIST_RAM.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/CntUNos/ContadorUnos/ContadorUnos/TB_contador.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/SISTEMAS OPERATIVOS/EQUIPO, PRÁCTICAS/arbol de procesos.c",
+		"/C/Users/marco/Documents/Downloads/longitud.asm",
+		"/C/Users/marco/Documents/Downloads/IPC.py",
+		"/C/Users/marco/Documents/ESCOM/prettytable-0.7/prettytable-0.7/IPC.py",
+		"/C/Users/marco/Documents/Downloads/ipcalc-0.34/ipcalc",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/CntUNos/ContadorUnos/ContadorUnos/TB_MAIN.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/CntUNos/ContadorUnos/ContadorUnos/TB_CONTROL.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/CntUNos/ContadorUnos/ContadorUnos/TB_Conta.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/CntUNos/ContadorUnos/ContadorUnos/TB_CONT.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DISEÑO DE SISTEMAS DIGITALES TODO/CntUNos/ContadorUnos/ContadorUnos/TB_REGISTRO.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/UA/SUMADORANTICIPADO.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/Pack Rikolino FULL Arqui/Arquitectura/ALU4Bits/alu.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/Pack Rikolino FULL Arqui/Arquitectura/alu/alu.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/Pack Rikolino FULL Arqui/Arquitectura/ALU4Bits/alu4bits.vhd",
+		"/C/Users/marco/Documents/Downloads/CarryLookAheadAdder.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/UA/UA.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/UA/TB_UA.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/Pack Rikolino FULL Arqui/Arquitectura/SumadoAnticipado/SumadorAnticipado.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/REDES1/práctica1.c",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DSD/PRACTICA1/ffd.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DSD/PRACTICA2/PRÀCTICA 2/REGISTRO1.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DSD/PRACTICA2/PRÀCTICA 2/REGISTRO.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DSD/PRACTICA1/FFL.VHD",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DSD/PRACTICA2/REGISTRO.VHD",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/Pack Rikolino FULL Arqui/Arquitectura/sumResCascada/sumResCascada_m.vhd",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/Pack Rikolino FULL Arqui/Arquitectura/SumadoAnticipado/SumadoAnticipado_bench.vhd",
+		"/C/Users/marco/Documents/ESCOM/CUARTO SEMESTRE/DSD/PRACTICA9/9/ASINCRONO/ASINCRONO.VHD",
+		"/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/Redes/prac1.c",
+		"/C/Users/marco/OneDrive/Escritorio/displayZ.vhd",
+		"/C/Users/marco/Documents/Downloads/ALU2.vhd",
+		"/C/Users/marco/Documents/Downloads/ALU.vhd",
+		"/E/displayZ.vhd",
+		"/E/Pract1.vhd",
+		"/E/Ejercicios_en_clase/3_Abr_18/Ejercicio.sql"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"LIBRARY",
+			"\n\t",
+			"setLayout",
+			"insert",
+			"<",
+			"\");\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/marco/Documents/Downloads/pila.vhd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 1279.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/marco/OneDrive/Escritorio/finalBossChipscope/bubble.asm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 549.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/finalBoss/src/program_memory.vhd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4494,
+								4319
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 6
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 1296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 199.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Compilar_en_Java.sublime-build",
+	"project": "Convex Hull.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\marco\\Documents\\ESCOM\\java pruebas\\HolaMundo.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_last_buffer_search": "\n--",
+		"_vintageous_last_buffer_search_command": "vi_octothorp",
+		"_vintageous_last_char_search_command": "vi_big_f",
+		"_vintageous_last_character_search": "V",
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "C:\\Users\\marco\\Documents\\ESCOM\\QUINTO SEMESTRE\\ARQUITECTURA DE COMPUTADORAS\\finalBoss\\src"
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 128.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

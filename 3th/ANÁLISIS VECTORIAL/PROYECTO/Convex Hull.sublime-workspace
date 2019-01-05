@@ -1,0 +1,337 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"i"
+			],
+			[
+				"area",
+				"area_of_triangle"
+			],
+			[
+				"_angle",
+				"_angle_to_point"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Python 3.7.0a2 (v3.7.0a2:f7ac4fe, Oct 17 2017, 17:06:29) [MSC v.1900 64 bit (AMD64)] on win32\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>> \nfrom matplodlib.pyplot import *\nfrom pylab import *\nfrom mpl_toolkits.mplot3d.axes3d import Axes3D \nfrom pylab import *\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'matplodlib'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'pylab'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'mpl_toolkits'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'pylab'\n>>> \nfrom matplodlib.pyplot import *\nfrom pylab import *\nfrom mpl_toolkits.mplot3d.axes3d import Axes3D \nimport numpy as np \nX = np.linspace (-1, 1, 90)\nY = np.linspace (-1, 1, 90)\nX, Y = np.meshgrid( X, Y)\nZ= (X**3*Y**2)/(X**6+Y**4)\nfig = plt.figure(figsize=(7,7))\nax = fig.add sbuplot(1,1,1 projection= \"3d\")\nax.plot_wireframe(X, Y, Z, rstride=2, cstride= 2, cmap= \"Blues\")\nax.set_xlabel('X Label')\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'matplodlib'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'pylab'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'mpl_toolkits'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'numpy'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'np' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'np' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'np' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'X' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'plt' is not defined\n>>>   File \"<stdin>\", line 1\n    ax = fig.add sbuplot(1,1,1 projection= \"3d\")\n                       ^\nSyntaxError: invalid syntax\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'ax' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'ax' is not defined\n>>> \n>>> \nfrom matplodlib.pyplot import *\nfrom pylab import *\nfrom mpl_toolkits.mplot3d.axes3d import Axes3D \nimport numpy as np \nX = np.linspace (-1, 1, 90)\nY = np.linspace (-1, 1, 90)\nX, Y = np.meshgrid( X, Y)\nZ= (X**3*Y**2)/(X**6+Y**4)\nfig = plt.figure(figsize=(7,7))\nax = fig.add sbuplot(1,1,1 projection= \"3d\")\nax.plot_wireframe(X, Y, Z, rstride=2, cstride= 2, cmap= \"Blues\")\nax.set_xlabel('X Label')\nax.set_xlabel('Y Label')\nax.set_xlabel('Z Label')\nshow ()\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'matplodlib'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'pylab'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'mpl_toolkits'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'numpy'\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'np' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'np' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'np' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'X' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'plt' is not defined\n>>>   File \"<stdin>\", line 1\n    ax = fig.add sbuplot(1,1,1 projection= \"3d\")\n                       ^\nSyntaxError: invalid syntax\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'ax' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'ax' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'ax' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'ax' is not defined\n>>> Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'show' is not defined\n>>> \n\n\timport numpy as n, pylab as p, time \n\n\tdef _angle_to_point(point, centre):\n\t#calculate angulo in  2-D entre puntos y cualesquiera\n\tdelta= point - centre\n\tres = n.arctan(delta[1] / delta [0])\n\t\tif delta[0]< 0:\n\t\t   res += n.pi\n\t\treturn res\n\ndef _draw_triangle(p1, p2, p3, **kwargs):\n\ttmp =n.vstack((p1, p2, p3))\n\tx,y =[x[0] for x in zip(tmp.transpose())]\n\tp.fill(x,y, **kwargs)\n\t#time.sleep(0.2)\n\ndef convex_hull(points, graphic=True, smigden=0.0075)\n\t#Calcula al subconjunto  de puntos que hacen que un casco convexo alrededor de puntos \n\n#Eliminar recursivamente los puntos que se encuentran dentro de los puntos vecinos hasta que solo queda el casco convexo\n\nif graphic: \n\tp.clf()\n\tp.plot(points[0], points[1], \"ro\")\nn_pts= points.shape[1]\nassert(n_pts > 5)\ncentre = points.mean(1)\nif graphic: p.plot((centre[0],),(centre[1],), \"bo\")\nangles = n.apply_along_axis(_angle_to_point, 0, points, centre)\npts_ord = points[:, angles.argsort ()]\nif graphic:\n\tfor i in xrange(n_pts):\n\t\tp.text(pts_ord[0,i] + smigden, pts_ord[1,i] + smigden, \\ \"%d\" % i)\npts= [x[0] for x in zip(pts_ord.transpose())]\nprev_pts = len(pts) + 1\nk=0\nwhile prev_pts > n_pts;\n\tprev_pts = n_pts\n\tn_pts = len(pts)\n\tif graphic: p.gca().patches = []\n\ti=-2 \n\twhile i < (n_pts -2):\n\t\tAij = area_of_triangle (centre, pts[i],   pts[(i+1) %n_pts])\n\t\tAjk = area_of_triangle (centre, pts[(i + 1 ) % n_pts], \\ pts[(i+2) %n_pts])\n\n\t\tAik = area_of_triangle (centre, pts[i], pts [(i+2) %n_pts])\n\t\tif graphic: \n\t\t_draw_triangle (centre, pts[i], pts[(i+1) % n_pts], \\ facecolor=\"blue\", alpha = 0.2)\n\t\t_draw_triangle (centre, pts[(i+1) % n_pts], \\pts[(i+2) %n_pts], \\ facecolor= \"green\", alpha = 0.2)\n\t\n\tif Aij + Ajk < Aik:\n\t\tif graphic: p.plot((pts[i+1][0],), (pts[i+1][1],), \"go\")\n\t\tdel pts[i+1]\n\t\ti += 1\n\t\tn_pts = len(pts)\n\tk += 1\nreturn n.asarray(pts)\n\nif __name__ == \"__main__\":\n\npoints = n.random.random_sample((2,40))\nhull_pts = convex_hull (points)",
+			"settings":
+			{
+				"buffer_size": 6752,
+				"line_ending": "Windows",
+				"name": "*REPL* [python]",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "from graphics import *\ndef main():\n\twin = GraphWin(\"Convexo\", 512, 512)\n\n\tc0 = Circle( Point(47,254) , 3 )\n\tc0.setFill(\"black\")\n\tc0.draw(win)\n\tc1 = Circle( Point(105,409) , 3 )\n\tc1.setFill(\"black\")\n\tc1.draw(win)\n\tc2 = Circle( Point(107,180) , 3 )\n\tc2.setFill(\"black\")\n\tc2.draw(win)\n\tc3 = Circle( Point(92,21) , 3 )\n\tc3.setFill(\"black\")\n\tc3.draw(win)\n\tc4 = Circle( Point(52,470) , 3 )\n\tc4.setFill(\"black\")\n\tc4.draw(win)\n\tc5 = Circle( Point(175,101) , 3 )\n\tc5.setFill(\"black\")\n\tc5.draw(win)\n\tc6 = Circle( Point(348,487) , 3 )\n\tc6.setFill(\"black\")\n\tc6.draw(win)\n\tc7 = Circle( Point(428,405) , 3 )\n\tc7.setFill(\"black\")\n\tc7.draw(win)\n\tc8 = Circle( Point(375,368) , 3 )\n\tc8.setFill(\"black\")\n\tc8.draw(win)\n\tc9 = Circle( Point(345,209) , 3 )\n\tc9.setFill(\"black\")\n\tc9.draw(win)\n\tc10 = Circle( Point(312,94) , 3 )\n\tc10.setFill(\"black\")\n\tc10.draw(win)\n\tc11 = Circle( Point(233,260) , 3 )\n\tc11.setFill(\"black\")\n\tc11.draw(win)\n\tc12 = Circle( Point(452,201) , 3 )\n\tc12.setFill(\"black\")\n\tc12.draw(win)\n\tc13 = Circle( Point(17,256) , 3 )\n\tc13.setFill(\"black\")\n\tc13.draw(win)\n\tc14 = Circle( Point(63,69) , 3 )\n\tc14.setFill(\"black\")\n\tc14.draw(win)\n\tc15 = Circle( Point(309,103) , 3 )\n\tc15.setFill(\"black\")\n\tc15.draw(win)\n\tc16 = Circle( Point(277,396) , 3 )\n\tc16.setFill(\"black\")\n\tc16.draw(win)\n\tc17 = Circle( Point(156,165) , 3 )\n\tc17.setFill(\"black\")\n\tc17.draw(win)\n\tc18 = Circle( Point(443,280) , 3 )\n\tc18.setFill(\"black\")\n\tc18.draw(win)\n\tc19 = Circle( Point(449,211) , 3 )\n\tc19.setFill(\"black\")\n\tc19.draw(win)\n\tc20 = Circle( Point(174,434) , 3 )\n\tc20.setFill(\"black\")\n\tc20.draw(win)\n\tc21 = Circle( Point(44,140) , 3 )\n\tc21.setFill(\"black\")\n\tc21.draw(win)\n\tc22 = Circle( Point(183,499) , 3 )\n\tc22.setFill(\"black\")\n\tc22.draw(win)\n\tc23 = Circle( Point(348,314) , 3 )\n\tc23.setFill(\"black\")\n\tc23.draw(win)\n\tc24 = Circle( Point(60,110) , 3 )\n\tc24.setFill(\"black\")\n\tc24.draw(win)\n\tc25 = Circle( Point(207,167) , 3 )\n\tc25.setFill(\"black\")\n\tc25.draw(win)\n\tc26 = Circle( Point(354,43) , 3 )\n\tc26.setFill(\"black\")\n\tc26.draw(win)\n\tc27 = Circle( Point(303,380) , 3 )\n\tc27.setFill(\"black\")\n\tc27.draw(win)\n\tc28 = Circle( Point(327,110) , 3 )\n\tc28.setFill(\"black\")\n\tc28.draw(win)\n\tc29 = Circle( Point(373,218) , 3 )\n\tc29.setFill(\"black\")\n\tc29.draw(win)\n\n\tl0 = Line(Point(17,256),Point(52,470))\n\tl0.setOutline(\"blue\")\n\tl0.setWidth(3)\n\tl0.draw(win)\n\tl1 = Line(Point(52,470),Point(183,499))\n\tl1.setOutline(\"blue\")\n\tl1.setWidth(3)\n\tl1.draw(win)\n\tl2 = Line(Point(183,499),Point(348,487))\n\tl2.setOutline(\"blue\")\n\tl2.setWidth(3)\n\tl2.draw(win) \n\tl3 = Line(Point(348,487),Point(428,405))\n\tl3.setOutline(\"blue\")\n\tl3.setWidth(3)\n\tl3.draw(win)\n\tl4 = Line(Point(428,405),Point(443,280))\n\tl4.setOutline(\"blue\")\n\tl4.setWidth(3)\n\tl4.draw(win)\n\tl5 = Line(Point(443,280),Point(452,201))\n\tl5.setOutline(\"blue\")\n\tl5.setWidth(3)\n\tl5.draw(win)\n\tl6 = Line(Point(452,201),Point(354,43))\n\tl6.setOutline(\"blue\")\n\tl6.setWidth(3)\n\tl6.draw(win)\n\tl7 = Line(Point(354,43),Point(92,21))\n\tl7.setOutline(\"blue\")\n\tl7.setWidth(3)\n\tl7.draw(win)\n\tl8 = Line(Point(92,21),Point(63,69))\n\tl8.setOutline(\"blue\")\n\tl8.setWidth(3)\n\tl8.draw(win)\n\tl9 = Line(Point(63,69),Point(44,140))\n\tl9.setOutline(\"blue\")\n\tl9.setWidth(3)\n\tl9.draw(win)\n\tl10 = Line(Point(44,140),Point(17,256))\n\tl10.setOutline(\"blue\")\n\tl10.setWidth(3)\n\tl10.draw(win)\n\tl11 = Line(Point(17,256),Point(17,256))\n\tl11.setOutline(\"blue\")\n\tl11.setWidth(3)\n\tl11.draw(win)\n\n\n\twin.getMouse() # pause for click in window\n\twin.close()\nmain()\n",
+			"file": "Convex.py",
+			"file_size": 3569,
+			"file_write_time": 131563697073822507,
+			"settings":
+			{
+				"buffer_size": 3420,
+				"line_ending": "Windows",
+				"name": "from graphics import *"
+			}
+		},
+		{
+			"file": "grafico.py",
+			"settings":
+			{
+				"buffer_size": 548939,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "INSTALL ",
+		"selected_items":
+		[
+			[
+				"INSTALL ",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/marco/Documents/ESCOM/TERCER SEMESTRE/ANÁLISIS VECTORIAL/graphics.py",
+		"/C/Users/marco/Documents/ESCOM/TERCER SEMESTRE/ANÁLISIS VECTORIAL/ConvexHull"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<",
+			"\");\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6752,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6752,
+								6752
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"auto_indent": false,
+							"detect_indentation": false,
+							"gutter": false,
+							"history_arrows": true,
+							"indent_subsequent_lines": false,
+							"line_numbers": false,
+							"repl": true,
+							"repl_external_id": "python",
+							"repl_id": "d8c9ba39de0e474caab5d88feb9d5a93",
+							"repl_restart_args":
+							{
+								"cmd":
+								[
+									"python",
+									"-i",
+									"-u"
+								],
+								"cwd": "$file_path",
+								"encoding": "utf8",
+								"extend_env":
+								{
+									"PYTHONIOENCODING": "utf-8"
+								},
+								"external_id": "python",
+								"syntax": "Packages/Python/Python.tmLanguage",
+								"type": "subprocess"
+							},
+							"repl_sublime2": false,
+							"smart_indent": false,
+							"spell_check": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1842.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Convex.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								121
+							]
+						],
+						"settings":
+						{
+							"auto_name": "from graphics import *",
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1889.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "grafico.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 548939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Convex Hull.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
