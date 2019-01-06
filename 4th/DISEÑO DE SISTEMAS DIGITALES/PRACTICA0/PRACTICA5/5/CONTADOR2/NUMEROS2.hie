@@ -1,0 +1,2 @@
+NUMEROS2.vhd #Entity numeros2 6
+NUMEROS2.vhd #Architecture contador numeros2 40
