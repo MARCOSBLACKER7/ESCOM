@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/TB_BARRELS_isim_beh.exe" -prj "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/TB_BARRELS_beh.prj" "work.TB_BARRELS" 

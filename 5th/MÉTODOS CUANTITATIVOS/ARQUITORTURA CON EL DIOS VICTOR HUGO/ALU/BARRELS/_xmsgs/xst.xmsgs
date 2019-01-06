@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 37: Syntax error near &quot;<arg fmt="%s" index="1">DIR</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 29: Unit &lt;<arg fmt="%s" index="1">barrels</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 40: Entity &lt;<arg fmt="%s" index="1">barrels</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 43: Syntax error near &quot;<arg fmt="%s" index="1">PROCESS</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 46: &lt;<arg fmt="%s" index="1">dataout</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 48: &lt;<arg fmt="%s" index="1">dataout</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 45: &lt;<arg fmt="%s" index="1">dir</arg>&gt; is not declared.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\BARRELS\BARRELS.vhd" Line 43: Possible infinite loop; process does not have a wait statement
+</msg>
+
+</messages>
+

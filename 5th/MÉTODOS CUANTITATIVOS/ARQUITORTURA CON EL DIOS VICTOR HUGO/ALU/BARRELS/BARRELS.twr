@@ -1,0 +1,111 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml BARRELS.twx BARRELS.ncd -o BARRELS.twr BARRELS.pcf
+
+Design file:              BARRELS.ncd
+Physical constraint file: BARRELS.pcf
+Device,package,speed:     xc7a100t,csg324,C,-2 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DATAIN<0>      |DATAOUT<0>     |    6.332|
+DATAIN<0>      |DATAOUT<1>     |    6.537|
+DATAIN<0>      |DATAOUT<2>     |    6.104|
+DATAIN<0>      |DATAOUT<3>     |    5.787|
+DATAIN<0>      |DATAOUT<4>     |    6.474|
+DATAIN<0>      |DATAOUT<5>     |    6.502|
+DATAIN<0>      |DATAOUT<6>     |    6.929|
+DATAIN<0>      |DATAOUT<7>     |    6.874|
+DATAIN<1>      |DATAOUT<1>     |    6.371|
+DATAIN<1>      |DATAOUT<2>     |    6.160|
+DATAIN<1>      |DATAOUT<3>     |    6.427|
+DATAIN<1>      |DATAOUT<4>     |    5.965|
+DATAIN<1>      |DATAOUT<5>     |    6.104|
+DATAIN<1>      |DATAOUT<6>     |    6.725|
+DATAIN<1>      |DATAOUT<7>     |    6.824|
+DATAIN<2>      |DATAOUT<2>     |    5.806|
+DATAIN<2>      |DATAOUT<3>     |    6.096|
+DATAIN<2>      |DATAOUT<4>     |    6.606|
+DATAIN<2>      |DATAOUT<5>     |    6.634|
+DATAIN<2>      |DATAOUT<6>     |    6.486|
+DATAIN<2>      |DATAOUT<7>     |    6.431|
+DATAIN<3>      |DATAOUT<3>     |    6.460|
+DATAIN<3>      |DATAOUT<4>     |    6.479|
+DATAIN<3>      |DATAOUT<5>     |    6.427|
+DATAIN<3>      |DATAOUT<6>     |    6.425|
+DATAIN<3>      |DATAOUT<7>     |    6.857|
+DATAIN<4>      |DATAOUT<4>     |    6.162|
+DATAIN<4>      |DATAOUT<5>     |    6.190|
+DATAIN<4>      |DATAOUT<6>     |    6.643|
+DATAIN<4>      |DATAOUT<7>     |    6.588|
+DATAIN<5>      |DATAOUT<5>     |    6.696|
+DATAIN<5>      |DATAOUT<6>     |    6.707|
+DATAIN<5>      |DATAOUT<7>     |    7.042|
+DATAIN<6>      |DATAOUT<6>     |    6.797|
+DATAIN<6>      |DATAOUT<7>     |    6.742|
+DATAIN<7>      |DATAOUT<7>     |    6.877|
+SHIFT<0>       |DATAOUT<0>     |    5.882|
+SHIFT<0>       |DATAOUT<1>     |    6.080|
+SHIFT<0>       |DATAOUT<2>     |    5.899|
+SHIFT<0>       |DATAOUT<3>     |    5.824|
+SHIFT<0>       |DATAOUT<4>     |    6.392|
+SHIFT<0>       |DATAOUT<5>     |    5.843|
+SHIFT<0>       |DATAOUT<6>     |    6.469|
+SHIFT<0>       |DATAOUT<7>     |    6.028|
+SHIFT<1>       |DATAOUT<0>     |    6.250|
+SHIFT<1>       |DATAOUT<1>     |    6.464|
+SHIFT<1>       |DATAOUT<2>     |    6.572|
+SHIFT<1>       |DATAOUT<3>     |    6.435|
+SHIFT<1>       |DATAOUT<4>     |    6.914|
+SHIFT<1>       |DATAOUT<5>     |    6.967|
+SHIFT<1>       |DATAOUT<6>     |    6.987|
+SHIFT<1>       |DATAOUT<7>     |    6.832|
+SHIFT<2>       |DATAOUT<0>     |    6.459|
+SHIFT<2>       |DATAOUT<1>     |    6.668|
+SHIFT<2>       |DATAOUT<2>     |    6.170|
+SHIFT<2>       |DATAOUT<3>     |    6.364|
+SHIFT<2>       |DATAOUT<4>     |    6.538|
+SHIFT<2>       |DATAOUT<5>     |    6.566|
+SHIFT<2>       |DATAOUT<6>     |    6.854|
+SHIFT<2>       |DATAOUT<7>     |    6.572|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Oct 10 11:32:29 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5001 MB
+
+
+

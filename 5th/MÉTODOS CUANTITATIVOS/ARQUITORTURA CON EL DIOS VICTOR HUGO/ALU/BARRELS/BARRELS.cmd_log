@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.syr" 
+netgen -intstyle ise -ar Structure -tm BARRELS -w -dir netgen/synthesis -ofmt vhdl -sim BARRELS.ngc BARRELS_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "BARRELS.ngc" BARRELS.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o BARRELS_map.ncd BARRELS.ngd BARRELS.pcf 
+par -w -intstyle ise -ol high -mt off BARRELS_map.ncd BARRELS.ncd BARRELS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml BARRELS.twx BARRELS.ncd -o BARRELS.twr BARRELS.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "BARRELS.ngc" BARRELS.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o BARRELS_map.ncd BARRELS.ngd BARRELS.pcf 
+par -w -intstyle ise -ol high -mt off BARRELS_map.ncd BARRELS.ncd BARRELS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml BARRELS.twx BARRELS.ncd -o BARRELS.twr BARRELS.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "BARRELS.ngc" BARRELS.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o BARRELS_map.ncd BARRELS.ngd BARRELS.pcf 
+par -w -intstyle ise -ol high -mt off BARRELS_map.ncd BARRELS.ncd BARRELS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml BARRELS.twx BARRELS.ncd -o BARRELS.twr BARRELS.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/BARRELS/BARRELS.syr" 
