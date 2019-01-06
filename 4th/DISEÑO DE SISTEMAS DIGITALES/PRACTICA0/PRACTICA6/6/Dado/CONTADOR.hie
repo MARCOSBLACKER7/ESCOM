@@ -1,0 +1,2 @@
+contador1.vhd #Entity contador 5
+contador1.vhd #Architecture programa contador 25
