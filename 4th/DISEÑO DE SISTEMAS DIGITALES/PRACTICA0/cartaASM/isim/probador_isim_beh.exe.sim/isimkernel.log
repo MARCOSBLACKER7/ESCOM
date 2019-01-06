@@ -1,0 +1,28 @@
+Command line:
+   probador_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  37831
+
+Mon Jun 11 16:19:04 2018
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 198.722 Meg
+
+ Total Signals          : 49
+ Total Nets             : 53
+ Total Signal Drivers   : 16
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 10
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 502
+
+ Total Simulation Time: 0.33 sec
+
+ Current Memory Usage: 276.32 Meg
+
+Mon Jun 11 16:19:45 2018
+

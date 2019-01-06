@@ -1,0 +1,28 @@
+Command line:
+   CONTADOR_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  35155
+
+Mon Jun 11 16:18:08 2018
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 198.713 Meg
+
+ Total Signals          : 6
+ Total Nets             : 12
+ Total Signal Drivers   : 1
+ Total Blocks           : 4
+ Total Primitive Blocks : 4
+ Total Processes        : 1
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 390
+
+ Total Simulation Time: 0.09 sec
+
+ Current Memory Usage: 276.312 Meg
+
+Mon Jun 11 16:18:22 2018
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/cartaASM/PRINCIPAL_isim_beh.exe" -prj "/home/ise/cartaASM/PRINCIPAL_beh.prj" "work.PRINCIPAL" 
