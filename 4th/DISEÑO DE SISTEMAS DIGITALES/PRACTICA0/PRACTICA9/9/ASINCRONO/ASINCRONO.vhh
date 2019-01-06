@@ -1,0 +1,11 @@
+ENTITY asincrono IS
+    PORT (
+	clk : in std_logic  ; 
+	clr : in std_logic  ; 
+	e : inout std_logic  ; 
+	d1 : inout std_logic  ; 
+	d2 : inout std_logic  ; 
+	uni : inout std_logic_vector (3 downto 0) ; 
+	dec : inout std_logic_vector (2 downto 0)
+    ) ;
+END asincrono ;

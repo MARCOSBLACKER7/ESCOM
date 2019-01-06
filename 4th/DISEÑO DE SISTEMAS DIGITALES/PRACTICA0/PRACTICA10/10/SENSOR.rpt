@@ -1,0 +1,566 @@
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp VHDL Synthesis Compiler: Version 6.3 IR 35
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  SENSOR.VHD
+Options:    -m -yu -e10 -w100 -o2 -ygs -fP -v10 -dc22v10 -ppalce22v10-25pc/pi -b SENSOR.VHD -u SENSOR.hie
+======================================================================
+
+vhdlfe V6.3 IR 35:  VHDL parser
+Wed May 09 20:01:06 2018
+
+Library 'work' => directory 'lc22v10'
+Linking 'C:\ARCHIV~1\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\work\cypress.vif'.
+Library 'ieee' => directory 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work'
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synarith.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synusgnd.vif'.
+SENSOR.VHD (line 173, col 26):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+SENSOR.VHD (line 178, col 26):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+SENSOR.VHD (line 179, col 18):  Note: Substituting module 'add_vi_v_us' for '+'.
+SENSOR.VHD (line 181, col 23):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+SENSOR.VHD (line 183, col 19):  Note: Substituting module 'add_vi_v_us' for '+'.
+SENSOR.VHD (line 187, col 26):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+SENSOR.VHD (line 188, col 18):  Note: Substituting module 'sub_vi_v_us' for '-'.
+SENSOR.VHD (line 190, col 23):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+SENSOR.VHD (line 192, col 19):  Note: Substituting module 'sub_vi_v_us' for '-'.
+
+vhdlfe:  No errors.
+
+
+tovif V6.3 IR 35:  High-level synthesis
+Wed May 09 20:01:06 2018
+
+Linking 'C:\ARCHIV~1\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synarith.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synusgnd.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\syntocyp.vif'.
+
+tovif:  No errors.
+
+
+topld V6.3 IR 35:  Synthesis and optimization
+Wed May 09 20:01:07 2018
+
+Linking 'C:\ARCHIV~1\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synarith.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synusgnd.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\syntocyp.vif'.
+State variable 'estado_presente' is represented by a Bit_vector (0 to 2).
+State encoding (sequential) for 'estado_presente' is:
+	q0 :=	b"000";
+	q1 :=	b"001";
+	q2 :=	b"010";
+	q3 :=	b"011";
+	q4 :=	b"100";
+	q5 :=	b"101";
+	q6 :=	b"110";
+	q7 :=	b"111";
+SENSOR.VHD (line 155, col 10):  Warning: (W507) No synchronous entry to state 'q7' of 'estado_presente'.
+State variable 'estado_siguiente' is represented by a Bit_vector (0 to 2).
+State encoding (sequential) for 'estado_siguiente' is:
+	q0 :=	b"000";
+	q1 :=	b"001";
+	q2 :=	b"010";
+	q3 :=	b"011";
+	q4 :=	b"100";
+	q5 :=	b"101";
+	q6 :=	b"110";
+	q7 :=	b"111";
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\lc22v10\stdlogic\c22v10.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	\MODULE_1:g2:a0:eqa_1\
+	\MODULE_1:g2:a0:eqa_0\
+
+
+Deleted 2 User equations/components.
+Deleted 1 Synthesized equation or component.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 81 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 37 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 10.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 0 wires.
+------------------------------------------------------
+Created 149 PLD nodes.
+
+topld:  No errors.  1 warning.
+
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN HEADER INFORMATION  (20:01:08)
+
+Input File(s): SENSOR.pla
+Device       : C22V10
+Package      : palce22v10-25pc/pi
+ReportFile   : SENSOR.rpt
+
+Program Controls:
+    COMMAND LANGUAGE_VHDL 
+    COMMAND PROPERTY BUS_HOLD ENABLE 
+
+Signal Requests:
+    GROUP USEPOL ALL
+    GROUP FAST_SLEW ALL
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (20:01:08)
+
+Messages:
+  Information: Process virtual '\dec(0)D\'\dec(0)D\ ... expanded.
+  Information: Process virtual '\dec(1)D\'\dec(1)D\ ... expanded.
+  Information: Process virtual '\dec(2)D\'\dec(2)D\ ... expanded.
+  Information: Process virtual '\uni(0)D\'\uni(0)D\ ... expanded.
+  Information: Process virtual '\uni(1)D\'\uni(1)D\ ... expanded.
+  Information: Process virtual '\uni(2)D\'\uni(2)D\ ... expanded.
+  Information: Process virtual '\uni(3)D\'\uni(3)D\ ... expanded.
+  Information: Process virtual 'estado_siguienteSBV_2'estado_siguienteSBV_2 ... expanded.
+  Information: Process virtual 'estado_siguienteSBV_1'estado_siguienteSBV_1 ... expanded.
+  Information: Process virtual 'estado_presenteSBV_2' ... converted to NODE.
+  Information: Process virtual 'estado_presenteSBV_1' ... converted to NODE.
+  Information: Process virtual 'estado_presenteSBV_0' ... converted to NODE.
+  Information: Process virtual 'estado_siguienteSBV_0'estado_siguienteSBV_0 ... expanded.
+  Information: Optimizing logic using best output polarity for signals:
+         dec(0).D dec(1).D dec(2).D estado_presenteSBV_0.D
+         estado_presenteSBV_1.D estado_presenteSBV_2.D uni(0).D uni(1).D
+         uni(2).D uni(3).D
+
+  Information: Selected logic optimization OFF for signals:
+         dec(0).AR dec(0).C dec(1).AR dec(1).C dec(2).AR dec(2).C
+         estado_presenteSBV_0.AR estado_presenteSBV_0.C
+         estado_presenteSBV_1.AR estado_presenteSBV_1.C
+         estado_presenteSBV_2.AR estado_presenteSBV_2.C uni(0).AR uni(0).C
+         uni(1).AR uni(1).C uni(2).AR uni(2).C uni(3).AR uni(3).C
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       MINOPT.EXE     01/NOV/1999  [v4.02 ] 6.3 IR 35
+
+LOGIC MINIMIZATION         ()
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (20:01:09)
+
+Messages:
+  Information: Optimizing Banked Preset/Reset requirements.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Equations" icon=FILE_RPT_EQUATION>
+DESIGN EQUATIONS           (20:01:09)
+</CYPRESSTAG>
+
+    dec(0).D =
+          /dec(0).Q * /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * /sensores(0) * uni(0).Q * /uni(1).Q * 
+          /uni(2).Q * uni(3).Q 
+        + /dec(0).Q * estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * /sensores(1) * /uni(0).Q * /uni(1).Q * 
+          /uni(2).Q * /uni(3).Q 
+        + dec(0).Q * estado_presenteSBV_2.Q * sensores(0) 
+        + dec(0).Q * estado_presenteSBV_0.Q * estado_presenteSBV_2.Q 
+        + dec(0).Q * /estado_presenteSBV_2.Q * uni(3).Q 
+        + dec(0).Q * /estado_presenteSBV_0.Q * /uni(0).Q 
+        + dec(0).Q * uni(0).Q * /uni(3).Q 
+        + dec(0).Q * sensores(1) * /uni(3).Q 
+        + dec(0).Q * uni(2).Q 
+        + dec(0).Q * uni(1).Q 
+        + dec(0).Q * /estado_presenteSBV_1.Q 
+
+    dec(0).AR =
+          clr 
+
+    dec(0).SP =
+          GND
+
+    dec(0).C =
+          clk 
+
+    dec(1).D =
+          dec(0).Q * /dec(1).Q * /estado_presenteSBV_0.Q * 
+          estado_presenteSBV_1.Q * estado_presenteSBV_2.Q * /sensores(0) * 
+          uni(0).Q * /uni(1).Q * /uni(2).Q * uni(3).Q 
+        + /dec(0).Q * /dec(1).Q * estado_presenteSBV_0.Q * 
+          estado_presenteSBV_1.Q * /estado_presenteSBV_2.Q * /sensores(1) * 
+          /uni(0).Q * /uni(1).Q * /uni(2).Q * /uni(3).Q 
+        + dec(1).Q * sensores(0) * uni(3).Q 
+        + dec(0).Q * dec(1).Q * estado_presenteSBV_0.Q 
+        + /dec(0).Q * dec(1).Q * uni(0).Q 
+        + dec(1).Q * /estado_presenteSBV_2.Q * uni(3).Q 
+        + dec(1).Q * estado_presenteSBV_2.Q * /uni(0).Q 
+        + dec(1).Q * sensores(1) * /uni(3).Q 
+        + dec(1).Q * /estado_presenteSBV_0.Q * /uni(3).Q 
+        + dec(1).Q * uni(2).Q 
+        + dec(1).Q * uni(1).Q 
+        + dec(1).Q * /estado_presenteSBV_1.Q 
+
+    dec(1).AR =
+          clr 
+
+    dec(1).SP =
+          GND
+
+    dec(1).C =
+          clk 
+
+    dec(2).D =
+          dec(0).Q * dec(1).Q * /dec(2).Q * /estado_presenteSBV_0.Q * 
+          estado_presenteSBV_1.Q * estado_presenteSBV_2.Q * /sensores(0) * 
+          uni(0).Q * /uni(1).Q * /uni(2).Q * uni(3).Q 
+        + /dec(0).Q * /dec(1).Q * /dec(2).Q * estado_presenteSBV_0.Q * 
+          estado_presenteSBV_1.Q * /estado_presenteSBV_2.Q * /sensores(1) * 
+          /uni(0).Q * /uni(1).Q * /uni(2).Q * /uni(3).Q 
+        + dec(2).Q * sensores(0) * uni(3).Q 
+        + dec(1).Q * dec(2).Q * estado_presenteSBV_0.Q 
+        + /dec(1).Q * dec(2).Q * uni(0).Q 
+        + /dec(0).Q * dec(2).Q * /estado_presenteSBV_0.Q 
+        + dec(2).Q * /estado_presenteSBV_2.Q * uni(3).Q 
+        + dec(2).Q * estado_presenteSBV_2.Q * /uni(0).Q 
+        + dec(2).Q * sensores(1) * /uni(3).Q 
+        + dec(0).Q * dec(2).Q * /uni(3).Q 
+        + dec(2).Q * uni(2).Q 
+        + dec(2).Q * uni(1).Q 
+        + dec(2).Q * /estado_presenteSBV_1.Q 
+
+    dec(2).AR =
+          clr 
+
+    dec(2).SP =
+          GND
+
+    dec(2).C =
+          clk 
+
+    estado_presenteSBV_0.D =
+          estado_presenteSBV_0.Q * /estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * sensores(1) 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * sensores(1) 
+        + /estado_presenteSBV_1.Q * sensores(0) * /sensores(1) 
+        + estado_presenteSBV_0.Q * sensores(0) 
+
+    estado_presenteSBV_0.AR =
+          clr 
+
+    estado_presenteSBV_0.SP =
+          GND
+
+    estado_presenteSBV_0.C =
+          clk 
+
+    estado_presenteSBV_1.D =
+          estado_presenteSBV_0.Q * /estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * /sensores(0) * sensores(1) 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * /sensores(0) * sensores(1) 
+        + estado_presenteSBV_1.Q * estado_presenteSBV_2.Q * sensores(0) * 
+          sensores(1) 
+        + /estado_presenteSBV_0.Q * estado_presenteSBV_2.Q * sensores(0) * 
+          sensores(1) 
+        + /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * sensores(0) 
+
+    estado_presenteSBV_1.AR =
+          clr 
+
+    estado_presenteSBV_1.SP =
+          GND
+
+    estado_presenteSBV_1.C =
+          clk 
+
+    estado_presenteSBV_2.D =
+          estado_presenteSBV_1.Q * estado_presenteSBV_2.Q * /sensores(0) * 
+          sensores(1) 
+        + /estado_presenteSBV_1.Q * /estado_presenteSBV_2.Q * /sensores(0) * 
+          sensores(1) 
+        + /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * sensores(0) * 
+          /sensores(1) 
+        + estado_presenteSBV_0.Q * sensores(0) * sensores(1) 
+        + /estado_presenteSBV_0.Q * /sensores(0) * sensores(1) 
+
+    estado_presenteSBV_2.AR =
+          clr 
+
+    estado_presenteSBV_2.SP =
+          GND
+
+    estado_presenteSBV_2.C =
+          clk 
+
+    uni(0).D =
+          /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * /sensores(0) * /uni(0).Q 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * /sensores(1) * /uni(0).Q 
+        + estado_presenteSBV_2.Q * sensores(0) * uni(0).Q 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_2.Q * uni(0).Q 
+        + /estado_presenteSBV_2.Q * sensores(1) * uni(0).Q 
+        + /estado_presenteSBV_0.Q * /estado_presenteSBV_2.Q * uni(0).Q 
+        + /estado_presenteSBV_1.Q * uni(0).Q 
+
+    uni(0).AR =
+          clr 
+
+    uni(0).SP =
+          GND
+
+    uni(0).C =
+          clk 
+
+    uni(1).D =
+          /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * /sensores(0) * uni(0).Q * /uni(1).Q * 
+          uni(2).Q 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * /sensores(1) * /uni(0).Q * /uni(1).Q * 
+          uni(3).Q 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * /sensores(1) * /uni(0).Q * /uni(1).Q * 
+          uni(2).Q 
+        + /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * /sensores(0) * uni(0).Q * /uni(1).Q * 
+          /uni(3).Q 
+        + sensores(0) * uni(0).Q * uni(1).Q 
+        + estado_presenteSBV_0.Q * uni(0).Q * uni(1).Q 
+        + /estado_presenteSBV_2.Q * sensores(1) * uni(1).Q 
+        + /estado_presenteSBV_0.Q * /estado_presenteSBV_2.Q * uni(1).Q 
+        + estado_presenteSBV_2.Q * /uni(0).Q * uni(1).Q 
+        + /estado_presenteSBV_1.Q * uni(1).Q 
+
+    uni(1).AR =
+          clr 
+
+    uni(1).SP =
+          GND
+
+    uni(1).C =
+          clk 
+
+    uni(2).D =
+          estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * /sensores(1) * /uni(0).Q * /uni(1).Q * 
+          /uni(2).Q * uni(3).Q 
+        + /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * /sensores(0) * uni(0).Q * uni(1).Q * 
+          /uni(2).Q 
+        + estado_presenteSBV_2.Q * sensores(0) * uni(2).Q 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_2.Q * uni(2).Q 
+        + /estado_presenteSBV_2.Q * uni(1).Q * uni(2).Q 
+        + /estado_presenteSBV_0.Q * /uni(0).Q * uni(2).Q 
+        + uni(0).Q * /uni(1).Q * uni(2).Q 
+        + sensores(1) * /uni(1).Q * uni(2).Q 
+        + /estado_presenteSBV_1.Q * uni(2).Q 
+
+    uni(2).AR =
+          clr 
+
+    uni(2).SP =
+          GND
+
+    uni(2).C =
+          clk 
+
+    uni(3).D =
+          /estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          estado_presenteSBV_2.Q * /sensores(0) * uni(0).Q * uni(1).Q * 
+          uni(2).Q * /uni(3).Q 
+        + estado_presenteSBV_0.Q * estado_presenteSBV_1.Q * 
+          /estado_presenteSBV_2.Q * /sensores(1) * /uni(0).Q * /uni(1).Q * 
+          /uni(2).Q * /uni(3).Q 
+        + sensores(0) * uni(0).Q * uni(3).Q 
+        + estado_presenteSBV_0.Q * uni(0).Q * uni(3).Q 
+        + /estado_presenteSBV_2.Q * uni(2).Q * uni(3).Q 
+        + /estado_presenteSBV_2.Q * sensores(1) * uni(3).Q 
+        + /estado_presenteSBV_0.Q * /estado_presenteSBV_2.Q * uni(3).Q 
+        + estado_presenteSBV_2.Q * /uni(0).Q * uni(3).Q 
+        + /uni(1).Q * uni(2).Q * uni(3).Q 
+        + uni(1).Q * /uni(2).Q * uni(3).Q 
+        + /estado_presenteSBV_1.Q * uni(3).Q 
+
+    uni(3).AR =
+          clr 
+
+    uni(3).SP =
+          GND
+
+    uni(3).C =
+          clk 
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN RULE CHECK          (20:01:09)
+
+Messages:
+                 None.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Pinout" icon=FILE_RPT_PINOUT>
+PINOUT INFORMATION   (20:01:09)
+</CYPRESSTAG>
+Messages:
+  Information: Checking for duplicate NODE logic.
+                 None.
+
+
+                                 C22V10
+                 __________________________________________
+            clk =| 1|                                  |24|* not used       
+    sensores(0) =| 2|                                  |23|= (estado_pres.. 
+    sensores(1) =| 3|                                  |22|= (estado_pres.. 
+       not used *| 4|                                  |21|= (estado_pres.. 
+       not used *| 5|                                  |20|= dec(2)         
+       not used *| 6|                                  |19|= dec(1)         
+       not used *| 7|                                  |18|= dec(0)         
+       not used *| 8|                                  |17|= uni(3)         
+       not used *| 9|                                  |16|= uni(2)         
+       not used *|10|                                  |15|= uni(1)         
+       not used *|11|                                  |14|= uni(0)         
+       not used *|12|                                  |13|= clr            
+                 __________________________________________
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Utilization" icon=FILE_RPT_UTILIZATION>
+RESOURCE UTILIZATION (20:01:09)
+</CYPRESSTAG>
+  Information: Macrocell Utilization.
+
+                     Description        Used     Max
+                 ______________________________________
+                 | Dedicated Inputs   |    3  |   11  |
+                 | Clock/Inputs       |    1  |    1  |
+                 | I/O Macrocells     |   10  |   10  |
+                 ______________________________________
+                                          14  /   22   = 63  %
+
+
+  Information: Output Logic Product Term Utilization.
+
+                  Node#  Output Signal Name  Used   Max
+                 ________________________________________
+                 | 14  |  uni(0)          |   7  |   8  |
+                 | 15  |  uni(1)          |  10  |  10  |
+                 | 16  |  uni(2)          |   9  |  12  |
+                 | 17  |  uni(3)          |  11  |  14  |
+                 | 18  |  dec(0)          |  11  |  16  |
+                 | 19  |  dec(1)          |  12  |  16  |
+                 | 20  |  dec(2)          |  13  |  14  |
+                 | 21  |  estado_prese..  |   4  |  12  |
+                 | 22  |  estado_prese..  |   5  |  10  |
+                 | 23  |  estado_prese..  |   5  |   8  |
+                 | 25  |  Unused          |   0  |   1  |
+                 ________________________________________
+                                             87  / 121   = 71  %
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+JEDEC ASSEMBLE             (20:01:09)
+
+Messages:
+  Information: Output file 'SENSOR.pin' created.
+  Information: Output file 'SENSOR.jed' created.
+
+  Usercode:    
+  Checksum:    CBF9
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully at 20:01:09
