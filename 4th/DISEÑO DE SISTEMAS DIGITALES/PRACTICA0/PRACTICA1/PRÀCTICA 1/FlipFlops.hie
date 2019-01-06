@@ -1,0 +1,2 @@
+FlipFlops.vhd #Entity flipflops 4
+FlipFlops.vhd #Architecture behave flipflops 33

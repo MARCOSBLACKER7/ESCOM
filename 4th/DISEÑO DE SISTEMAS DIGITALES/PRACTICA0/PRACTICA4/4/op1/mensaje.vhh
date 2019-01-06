@@ -1,0 +1,8 @@
+ENTITY mensaje IS
+    PORT (
+	clk : in std_logic  ; 
+	clr : in std_logic  ; 
+	an : inout std_logic_vector (2 downto 0) ; 
+	d : inout std_logic_vector (6 downto 0)
+    ) ;
+END mensaje ;

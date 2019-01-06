@@ -1,0 +1,14 @@
+Cypress Package: palce22v10-25pc/pi  PinOut File: SECUENCIA.pin
+
+This file was created on 04/04/2018 at 05:50:41 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+an0 inout <> Enabled Normal 14 <> [User] 
+d(6) out <> Enabled Normal 15 <> [User] 
+d(5) out <> Enabled Normal 16 <> [User] 
+d(4) out <> Enabled Normal 17 <> [User] 
+d(3) out <> Enabled Normal 18 <> [User] 
+d(2) out <> Enabled Normal 19 <> [User] 
+d(1) out <> Enabled Normal 20 <> [User] 
+d(0) out <> Enabled Normal 21 <> [User] 

@@ -1,0 +1,7 @@
+ Compilation with file reorder...
+ File: C:\Documents and Settings\KarlaPaola\My Documents\PRACTICA1\vhd\FFL.vhd
+ Compile Entity "ffl"
+ Compile Architecture "DSMB" of Entity "ffl"
+ Top-Level unit detected
+ Entity  =>   ffl
+ Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]

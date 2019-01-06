@@ -1,0 +1,2 @@
+NUMEROS.vhd #Entity numeros 3
+NUMEROS.vhd #Architecture contador numeros 26

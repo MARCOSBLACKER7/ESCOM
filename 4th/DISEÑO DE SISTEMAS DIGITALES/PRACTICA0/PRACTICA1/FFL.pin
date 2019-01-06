@@ -1,0 +1,22 @@
+Cypress Package: palc22v10d-25pc  PinOut File: FFL.pin
+
+This file was created on 02/24/2018 at 18:57:56 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+clk gclk <> Enabled Normal 1 <> [User] 
+j in <> Enabled Normal 2 <> [User] 
+k in <> Enabled Normal 3 <> [User] 
+t in <> Enabled Normal 4 <> [User] 
+s in <> Enabled Normal 5 <> [User] 
+r in <> Enabled Normal 6 <> [User] 
+d in <> Enabled Normal 7 <> [User] 
+sel(0) in <> Enabled Normal 8 <> [User] 
+sel(1) in <> Enabled Normal 9 <> [User] 
+clr in <> Enabled Normal 13 <> [User] 
+display(0) out <> Enabled Normal 16 <> [User] 
+display(1) out <> Enabled Normal 17 <> [User] 
+display(2) out <> Enabled Normal 18 <> [User] 
+display(3) out <> Enabled Normal 19 <> [User] 
+display(4) out <> Enabled Normal 20 <> [User] 
+display(5) inout <> Enabled Normal 21 <> [User] 
