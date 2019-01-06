@@ -1,0 +1,51 @@
+<argo version="6">
+  <documentation>
+    <authorname></authorname>
+    <authoremail></authoremail>
+    <version>0.34</version>
+    <description>
+      
+    </description>
+  </documentation>
+  <settings>
+    <notationlanguage>UML 1.4</notationlanguage>
+    <showboldnames>false</showboldnames>
+    <useguillemots>false</useguillemots>
+    <showassociationnames>true</showassociationnames>
+    <showvisibility>false</showvisibility>
+    <showmultiplicity>false</showmultiplicity>
+    <showinitialvalue>false</showinitialvalue>
+    <showproperties>false</showproperties>
+    <showtypes>true</showtypes>
+    <showstereotypes>false</showstereotypes>
+    <showsingularmultiplicities>true</showsingularmultiplicities>
+    <defaultshadowwidth>1</defaultshadowwidth>
+    <hidebidirectionalarrows>true</hidebidirectionalarrows>    
+    <fontname>Dialog</fontname>
+    <fontsize>12</fontsize>
+    <defaultstereotypeview>0</defaultstereotypeview>
+    <activediagram>modelo sin título activity 1</activediagram>
+  </settings>
+  <searchpath href="PROJECT_DIR" />
+  <members>
+    <member type="profile"
+            name="adoo_profile.profile" />
+    <member type="xmi"
+            name="adoo.xmi" />
+    <member type="pgml"
+            name="adoo_Diagramadeclase.pgml"
+            diagramclass="org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram"
+            diagramname="Diagrama de clase" />
+    <member type="pgml"
+            name="adoo_Diagramadecasodeuso.pgml"
+            diagramclass="org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram"
+            diagramname="Diagrama de caso de uso" />
+    <member type="pgml"
+            name="adoo_modelosintítuloactivity1.pgml"
+            diagramclass="org.argouml.uml.diagram.activity.ui.UMLActivityDiagram"
+            diagramname="modelo sin título activity 1" />
+    <member type="todo"
+            name="adoo.todo" />
+  </members>
+  <historyfile name="" />
+</argo>
