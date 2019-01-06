@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/chipscoope/CONT_DECO.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/chipscoope/CONT_DECO.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc RESTRICCIONES.ucf -p xc7a100t-csg324-2 CONT_DECO_cs.ngc CONT_DECO.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CONT_DECO_map.ncd CONT_DECO.ngd CONT_DECO.pcf 
+par -w -intstyle ise -ol high -mt off CONT_DECO_map.ncd CONT_DECO.ncd CONT_DECO.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml CONT_DECO.twx CONT_DECO.ncd -o CONT_DECO.twr CONT_DECO.pcf -ucf RESTRICCIONES.ucf 
+bitgen -intstyle ise -f CONT_DECO.ut CONT_DECO.ncd 
+bitgen -intstyle ise -f CONT_DECO.ut CONT_DECO.ncd 
+bitgen -intstyle ise -f CONT_DECO.ut CONT_DECO.ncd 

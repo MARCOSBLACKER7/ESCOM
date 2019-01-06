@@ -1,0 +1,37 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc RESTRICCIONES.ucf -p xc7a100t-csg324-2
+CONT_DECO_cs.ngc CONT_DECO.ngd
+
+Reading NGO file "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE
+COMPUTADORAS/chipscoope/CONT_DECO_cs.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "RESTRICCIONES.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 4500936 kilobytes
+
+Writing NGD file "CONT_DECO.ngd" ...
+Total REAL time to NGDBUILD completion:  14 sec
+Total CPU time to NGDBUILD completion:   12 sec
+
+Writing NGDBUILD log file "CONT_DECO.bld"...
