@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE twReport [
+<!ELEMENT twReport (twHead?, (twWarn | twDebug | twInfo)*, twBody, twSum?,
+					twDebug*, twFoot?, twClientInfo?)>
+<!ATTLIST twReport version CDATA "10,4">
+<!ELEMENT twHead (twExecVer?, twCopyright, twCmdLine?, twDesign?, twPCF?, twDevInfo, twRptInfo, twEnvVar*)>
+<!ELEMENT twExecVer (#PCDATA)>
+<!ELEMENT twCopyright (#PCDATA)>
+<!ELEMENT twCmdLine (#PCDATA)>
+<!ELEMENT twDesign (#PCDATA)>
+<!ELEMENT twPCF (#PCDATA)>
+<!ELEMENT twDevInfo (twDevName, twSpeedGrade, twSpeedVer?)>
+<!ELEMENT twDevName (#PCDATA)>
+<!ATTLIST twDevInfo arch CDATA #IMPLIED pkg CDATA #IMPLIED>
+<!ELEMENT twSpeedGrade (#PCDATA)>
+<!ELEMENT twSpeedVer (#PCDATA)>
+<!ELEMENT twRptInfo (twItemLimit?, (twUnconst, twUnconstLimit?)?)>
+<!ATTLIST twRptInfo twRptLvl (twErr | twVerbose | twTerseErr | twSum | twTimeGrp) #REQUIRED>
+<!ATTLIST twRptInfo twAdvRpt  (TRUE | FALSE) "FALSE">
+<!ATTLIST twRptInfo twTimeUnits (twPsec | twNsec | twUsec | twMsec | twSec) "twNsec">
+<!ATTLIST twRptInfo twFreqUnits (twGHz | twMHz | twHz) "twMHz">
+<!ATTLIST twRptInfo twReportMinPaths CDATA #IMPLIED>
+<!ELEMENT twItemLimit (#PCDATA)>
+<!ELEMENT twUnconst EMPTY>
+<!ELEMENT twUnconstLimit (#PCDATA)>
+<!ELEMENT twEnvVar EMPTY>
+<!ATTLIST twEnvVar name CDATA #REQUIRED>
+<!ATTLIST twEnvVar description CDATA #REQUIRED>
+<!ELEMENT twWarn (#PCDATA)>
+<!ELEMENT twInfo (#PCDATA)>
+<!ELEMENT twDebug (#PCDATA)>
+<!ELEMENT twBody (twDerating?, (twSumRpt | twVerboseRpt | twErrRpt | twTerseErrRpt | twTimeGrpRpt), twNonDedClks?)>
+<!ATTLIST twBody twFastPaths CDATA #IMPLIED>
+<!ELEMENT twDerating (twProc?, twTemp?, twVolt?)>
+<!ELEMENT twProc (#PCDATA)>
+<!ELEMENT twTemp (#PCDATA)>
+<!ELEMENT twVolt (#PCDATA)>
+<!ELEMENT twSumRpt (twConstRollupTable*, twConstList?, twConstSummaryTable?, twUnmetConstCnt?, (twWarn | twInfo | twDebug)*, twDataSheet?)>
+<!ELEMENT twErrRpt (twCycles?, (twConst | twTIG |  twConstRollupTable)*, twUnmetConstCnt?, (twWarn | twInfo | twDebug)*, twDataSheet?, twTimeGrp*)>
+<!ELEMENT twTerseErrRpt (twConstList, twUnmetConstCnt?, twDataSheet?)>
+<!ELEMENT twVerboseRpt (twCycles?, (twConst | twTIG | twConstRollupTable)*, twUnmetConstCnt?, (twWarn | twInfo | twDebug)*, twDataSheet?, twTimeGrp*)> 
+<!ELEMENT twCycles (twSigConn+)>
+<!ATTLIST twCycles twNum CDATA #REQUIRED>
+<!ELEMENT twSigConn (twSig, twDriver, twLoad)>
+<!ELEMENT twSig (#PCDATA)>
+<!ELEMENT twDriver (#PCDATA)>
+<!ELEMENT twLoad (#PCDATA)> 
+<!ELEMENT twConst (twConstHead, ((twPathRpt?,twRacePathRpt?, twPathRptBanner?)* |  (twPathRpt*, twRacePathRpt?) |  twNetRpt* | twClkSkewLimit*))>
+<!ATTLIST twConst twConstType (NET | 
+							   NETDELAY | 
+							   NETSKEW | 
+							   PATH |
+							   DEFPERIOD |
+							   UNCONSTPATH |
+							   DEFPATH | 
+							   PATH2SETUP |
+							   UNCONSTPATH2SETUP | 
+							   PATHCLASS | 
+							   PATHDELAY | 
+							   PERIOD |
+							   FREQUENCY |
+							   PATHBLOCK |
+							   OFFSET |
+							   OFFSETIN |
+							   OFFSETINCLOCK | 
+							   UNCONSTOFFSETINCLOCK |
+							   OFFSETINDELAY |
+							   OFFSETINMOD |
+							   OFFSETOUT |
+							   OFFSETOUTCLOCK |
+							   UNCONSTOFFSETOUTCLOCK | 
+							   OFFSETOUTDELAY |
+							   OFFSETOUTMOD| CLOCK_SKEW_LIMITS) #IMPLIED> 
+<!ELEMENT twConstHead (twConstName, twItemCnt, twErrCntSetup, twErrCntEndPt?, twErrCntHold,
+					   twEndPtCnt?,
+					   twPathErrCnt?, (twMinPer| twMaxDel| twMaxFreq| twMaxNetDel| twMaxNetSkew| twMinOff| twMaxOff)*)>
+<!ELEMENT twConstName (#PCDATA)>
+<!ATTLIST twConstName UCFConstName CDATA #IMPLIED>
+<!ATTLIST twConstHead uID CDATA #IMPLIED>
+<!ELEMENT twItemCnt (#PCDATA)>
+<!ELEMENT twErrCnt (#PCDATA)>
+<!ELEMENT twErrCntEndPt (#PCDATA)>
+<!ELEMENT twErrCntSetup (#PCDATA)>
+<!ELEMENT twErrCntHold (#PCDATA)>
+<!ATTLIST twErrCntHold twRaceChecked (TRUE | FALSE) "FALSE">
+<!ELEMENT twEndPtCnt (#PCDATA)>
+<!ELEMENT twPathErrCnt (#PCDATA)>
+<!ELEMENT twMinPer (#PCDATA) >
+<!ELEMENT twFootnote EMPTY>
+<!ATTLIST twFootnote number CDATA #REQUIRED>
+<!ELEMENT twMaxDel (#PCDATA)>
+<!ELEMENT twMaxFreq (#PCDATA)>
+<!ELEMENT twMinOff (#PCDATA)>
+<!ELEMENT twMaxOff (#PCDATA)>
+<!ELEMENT twTIG (twTIGHead, (twPathRpt*,twRacePathRpt?))>
+<!ELEMENT twTIGHead (twTIGName, twInstantiated, twBlocked)>
+<!ELEMENT twTIGName (#PCDATA)>
+<!ELEMENT twInstantiated (#PCDATA)>
+<!ELEMENT twBlocked (#PCDATA)>
+<!ELEMENT twRacePathRpt (twRacePath+)>
+<!ELEMENT twPathRpt (twUnconstPath | twConstPath | twUnconstOffIn | twConstOffIn | twUnconstOffOut | twConstOffOut | twModOffOut)>
+<!ELEMENT twUnconstPath (twTotDel, twSrc, twDest,  (twDel, twSUTime)?, twTotPathDel?, twClkSkew?, tw2Phase?, twClkUncert?, twDetPath?)>
+<!ATTLIST twUnconstPath twDataPathType CDATA #IMPLIED
+						twSimpleMinPath CDATA #IMPLIED>
+<!ELEMENT twTotDel (#PCDATA)>
+<!ELEMENT twSrc (#PCDATA)>
+<!ATTLIST twSrc BELType CDATA #IMPLIED>
+<!ELEMENT twDest (#PCDATA)>
+<!ATTLIST twDest BELType CDATA #IMPLIED>
+<!ELEMENT twDel (#PCDATA)>
+<!ELEMENT twSUTime (#PCDATA)>
+<!ELEMENT twTotPathDel (#PCDATA)>
+<!ELEMENT twClkSkew (#PCDATA)>
+<!ATTLIST twClkSkew dest CDATA #IMPLIED src CDATA #IMPLIED>
+<!ELEMENT twConstPath (twSlack, twSrc, twDest, twTotPathDel?, twClkSkew?, twDelConst, tw2Phase?, twClkUncert?, twDetPath?)>
+<!ATTLIST twConstPath twDataPathType CDATA "twDataPathMaxDelay">
+<!ATTLIST twConstPath constType (period | fromto | unknown) "unknown">
+<!ELEMENT twSlack (#PCDATA)>
+<!ELEMENT twDelConst (#PCDATA)>
+<!ELEMENT tw2Phase EMPTY>
+<!ELEMENT twClkUncert (#PCDATA)>
+<!ATTLIST twClkUncert fSysJit CDATA #IMPLIED  fInputJit CDATA #IMPLIED
+					  fDCMJit CDATA #IMPLIED
+					  fPhaseErr CDATA #IMPLIED
+					  sEqu CDATA #IMPLIED>
+<!ELEMENT twRacePath (twSlack, twSrc, twDest, twClkSkew, twDelConst?, twClkUncert?, twDetPath)>
+<!ELEMENT twPathRptBanner (#PCDATA)>
+<!ATTLIST twPathRptBanner sType CDATA #IMPLIED iPaths CDATA #IMPLIED iCriticalPaths CDATA #IMPLIED>
+<!ELEMENT twUnconstOffIn (twOff, twSrc, twDest, twGuaranteed?, twClkUncert?, (twDataPath, twClkPath)?)>
+<!ATTLIST twUnconstOffIn twDataPathType CDATA #IMPLIED>
+<!ELEMENT twOff (#PCDATA)>
+<!ELEMENT twGuaranteed EMPTY>
+<!ELEMENT twConstOffIn (twSlack, twSrc, twDest, ((twClkDel, twClkSrc, twClkDest) | twGuarInSetup), twOff, twOffSrc, twOffDest, twClkUncert?, (twDataPath, twClkPath)?)>
+<!ATTLIST twConstOffIn twDataPathType CDATA "twDataPathMaxDelay">
+<!ATTLIST twConstOffIn twDurationNotSpecified CDATA #IMPLIED>
+<!ELEMENT twClkDel (#PCDATA)>
+<!ELEMENT twClkSrc (#PCDATA)>
+<!ELEMENT twClkDest (#PCDATA)>
+<!ELEMENT twGuarInSetup (#PCDATA)>
+<!ELEMENT twOffSrc (#PCDATA)>
+<!ELEMENT twOffDest (#PCDATA)>
+<!ELEMENT twUnconstOffOut (twOff, twSrc, twDest, twClkUncert?, (twClkPath, twDataPath)?)>
+<!ATTLIST twUnconstOffOut twDataPathType CDATA #IMPLIED>
+<!ELEMENT twConstOffOut (twSlack, twSrc, twDest, twClkDel, twClkSrc, twClkDest, twDataDel, twDataSrc, twDataDest, twOff, twOffSrc, twOffDest, twClkUncert?, (twClkPath, twDataPath)?)>
+<!ATTLIST twConstOffOut twDataPathType CDATA "twDataPathMaxDelay">
+<!ELEMENT twDataDel (#PCDATA)>
+<!ELEMENT twDataSrc (#PCDATA)>
+<!ELEMENT twDataDest (#PCDATA)>
+<!ELEMENT twModOffOut (twSlack, twDest, twDataDel, twDataSrc, twDataDest, twClkUncert?, twDataPath?)>
+<!ELEMENT twDetPath (twSrc, twDest, twLogLvls, twSrcSite, twSrcClk?, twPathDel*, (twLogDel, twRouteDel, twTotDel)?, twDestClk?, (twPctLog, twPctRoute)?)>
+<!ATTLIST twDetPath maxSiteLen CDATA #IMPLIED>
+<!ELEMENT twDataPath (twSrc, twDest, twLogLvls, twSrcSite, twSrcClk?, twPathDel*, (twLogDel, twRouteDel, twTotDel)?, twDestClk?, (twPctLog, twPctRoute)?)>
+<!ATTLIST twDataPath maxSiteLen CDATA #IMPLIED>
+<!ELEMENT twClkPath (twSrc, twDest, twLogLvls, twSrcSite, twSrcClk?, twPathDel*, (twLogDel, twRouteDel, twTotDel)?, twDestClk?, (twPctLog, twPctRoute)?)>
+<!ATTLIST twClkPath maxSiteLen CDATA #IMPLIED>
+<!ELEMENT twLogLvls (#PCDATA)>
+<!ELEMENT twSrcSite (#PCDATA)>
+<!ELEMENT twSrcClk (#PCDATA)>
+<!ATTLIST twSrcClk twEdge (twRising | twFalling) "twRising">
+<!ATTLIST twSrcClk twArriveTime CDATA #IMPLIED>
+<!ATTLIST twSrcClk twClkRes CDATA #IMPLIED>
+<!ELEMENT twPathDel (twSite, twDelType, twFanCnt?, twDelInfo?, twComp, twNet?, twBEL*)>
+<!ATTLIST twPathDel twHoldTime (TRUE | FALSE) "FALSE">
+<!ELEMENT twDelInfo (#PCDATA)>
+<!ATTLIST twDelInfo twEdge (twRising | twFalling | twIndet) #REQUIRED>
+<!ATTLIST twDelInfo twAcc (twRouted | twEst | twApprox) "twRouted">
+<!ELEMENT twSite (#PCDATA)>
+<!ELEMENT twDelType (#PCDATA)>
+<!ELEMENT twFanCnt (#PCDATA)>
+<!ELEMENT twComp (#PCDATA)>
+<!ELEMENT twNet (#PCDATA)>
+<!ELEMENT twBEL (#PCDATA)>
+<!ELEMENT twLogDel (#PCDATA)>
+<!ELEMENT twRouteDel (#PCDATA)>
+<!ELEMENT twDestClk (#PCDATA)>
+<!ATTLIST twDestClk twEdge (twRising | twFalling) "twRising">
+<!ATTLIST twDestClk twArriveTime CDATA #IMPLIED>
+<!ATTLIST twDestClk twClkRes CDATA #IMPLIED>
+<!ELEMENT twPctLog (#PCDATA)>
+<!ELEMENT twPctRoute (#PCDATA)>
+<!ELEMENT twNetRpt (twDelNet | twSlackNet | twSkewNet)>
+<!ELEMENT twDelNet (twDel, twNet, twDetNet?)>
+<!ELEMENT twSlackNet (twSlack, twNet, twDel, twNotMet?, twTimeConst, twAbsSlack, twDetNet?)>
+<!ELEMENT twTimeConst (#PCDATA)>
+<!ELEMENT twAbsSlack (#PCDATA)>
+<!ELEMENT twSkewNet (twSlack, twNet, twSkew, twNotMet?, twTimeConst, twAbsSlack, twDetSkewNet?)>
+<!ELEMENT twSkew (#PCDATA)>
+<!ELEMENT twDetNet (twNetDel*)>
+<!ELEMENT twNetDel (twSrc, twDest, twNetDelInfo)>
+<!ELEMENT twNetDelInfo (#PCDATA)>
+<!ATTLIST twNetDelInfo twAcc (twRouted | twEst | twApprox) "twRouted">
+<!ELEMENT twDetSkewNet (twNetSkew*)>
+<!ELEMENT twNetSkew (twSrc, twDest, twNetDelInfo, twSkew)>
+<!ELEMENT twClkSkewLimit  EMPTY>
+<!ATTLIST twClkSkewLimit slack CDATA #IMPLIED skew CDATA #IMPLIED arrv1name CDATA #IMPLIED                      arrv1 CDATA #IMPLIED
+		         arrv2name CDATA #IMPLIED arrv2 CDATA #IMPLIED uncert CDATA #IMPLIED>
+<!ELEMENT twConstRollupTable (twConstRollup*)>
+<!ATTLIST twConstRollupTable uID CDATA #IMPLIED>
+<!ELEMENT twConstRollup  EMPTY>
+<!ATTLIST twConstRollup name CDATA #IMPLIED fullName CDATA #IMPLIED type CDATA #IMPLIED                      requirement CDATA #IMPLIED prefType CDATA #IMPLIED actual CDATA #IMPLIED>
+<!ATTLIST twConstRollup  actualRollup CDATA #IMPLIED                      errors CDATA #IMPLIED errorRollup CDATA #IMPLIED items CDATA #IMPLIED                      itemsRollup CDATA #IMPLIED>
+<!ELEMENT twConstList (twConstListItem)*>
+<!ELEMENT twConstListItem (twConstName, twNotMet?, twReqVal?, twActVal?, twLogLvls?)> 
+<!ATTLIST twConstListItem twUnits (twTime | twFreq) "twTime">
+<!ELEMENT twNotMet EMPTY>
+<!ELEMENT twReqVal (#PCDATA)>
+<!ELEMENT twActVal (#PCDATA)>
+<!ELEMENT twConstSummaryTable (twConstStats|twConstSummary)*>
+<!ATTLIST twConstSummaryTable twEmptyConstraints CDATA #IMPLIED>
+<!ELEMENT twConstStats (twConstName)>
+<!ATTLIST twConstStats twUnits (twTime | twFreq) "twTime">
+<!ATTLIST twConstStats twRequired CDATA #IMPLIED>
+<!ATTLIST twConstStats twActual CDATA #IMPLIED>
+<!ATTLIST twConstStats twSlack CDATA #IMPLIED>
+<!ATTLIST twConstStats twLogLvls CDATA #IMPLIED>
+<!ATTLIST twConstStats twErrors CDATA #IMPLIED>
+<!ATTLIST twConstStats twPCFIndex CDATA #IMPLIED>
+<!ATTLIST twConstStats twAbsSlackIndex CDATA #IMPLIED>
+<!ATTLIST twConstStats twTCType CDATA #IMPLIED>
+<!ELEMENT twConstSummary (twConstName, twConstData?, twConstData*)>
+<!ATTLIST twConstSummary PCFIndex CDATA #IMPLIED  slackIndex CDATA #IMPLIED>
+<!ELEMENT twConstData EMPTY>
+<!ATTLIST twConstData type CDATA #IMPLIED  units (MHz | ns) "ns" slack CDATA #IMPLIED
+					  best CDATA #IMPLIED requested CDATA #IMPLIED
+					  errors CDATA #IMPLIED
+					  score CDATA #IMPLIED>
+<!ELEMENT twTimeGrpRpt (twTimeGrp)*>
+<!ELEMENT twTimeGrp (twTimeGrpName, twCompList?, twBELList?, twMacList?, twBlockList?, twSigList?, twPinList?)>
+<!ELEMENT twTimeGrpName (#PCDATA)>
+<!ELEMENT twCompList (twCompName+)>
+<!ELEMENT twCompName (#PCDATA)>
+<!ELEMENT twSigList (twSigName+)>
+<!ELEMENT twSigName (#PCDATA)>
+<!ELEMENT twBELList (twBELName+)>
+<!ELEMENT twBELName (#PCDATA)>
+<!ELEMENT twBlockList (twBlockName+)>
+<!ELEMENT twBlockName (#PCDATA)>
+<!ELEMENT twMacList (twMacName+)>
+<!ELEMENT twMacName (#PCDATA)>
+<!ELEMENT twPinList (twPinName+)>
+<!ELEMENT twPinName (#PCDATA)>
+<!ELEMENT twUnmetConstCnt (#PCDATA)>
+<!ELEMENT twDataSheet (twSUH2ClkList*, (twClk2PadList|twClk2OutList)*, twClk2SUList*, twPad2PadList?, twOffsetTables?)>
+<!ATTLIST twDataSheet twNameLen CDATA #REQUIRED>
+<!ELEMENT twSUH2ClkList (twDest, twSUH2Clk+)>
+<!ATTLIST twSUH2ClkList twDestWidth CDATA #IMPLIED>
+<!ATTLIST twSUH2ClkList twPhaseWidth CDATA #IMPLIED>
+<!ELEMENT twSUH2Clk (twSrc, twSUHTime, twSUHTime?)> 
+<!ELEMENT twSUHTime (twSU2ClkTime?,twH2ClkTime?)>
+<!ATTLIST twSUHTime twInternalClk CDATA #IMPLIED>
+<!ATTLIST twSUHTime twClkPhase CDATA #IMPLIED>
+<!ELEMENT twSU2ClkTime (#PCDATA)>
+<!ATTLIST twSU2ClkTime twEdge (twRising | twFalling | twIndet) #REQUIRED>
+<!ELEMENT twH2ClkTime (#PCDATA)>
+<!ATTLIST twH2ClkTime twEdge (twRising | twFalling | twIndet) #REQUIRED>
+<!ELEMENT twClk2PadList (twSrc, twClk2Pad+)>
+<!ELEMENT twClk2Pad (twDest, twTime)>
+<!ELEMENT twTime (#PCDATA)>
+<!ATTLIST twTime twEdge (twRising | twFalling | twIndet) #REQUIRED>
+<!ELEMENT twClk2OutList (twSrc, twClk2Out+)>
+<!ATTLIST twClk2OutList twDestWidth CDATA #REQUIRED>
+<!ATTLIST twClk2OutList twPhaseWidth CDATA #REQUIRED>
+<!ELEMENT twClk2Out EMPTY>
+<!ATTLIST twClk2Out twOutPad CDATA #REQUIRED>
+<!ATTLIST twClk2Out twMinTime CDATA #REQUIRED>
+<!ATTLIST twClk2Out twMinEdge CDATA #REQUIRED>
+<!ATTLIST twClk2Out twMaxTime CDATA #REQUIRED>
+<!ATTLIST twClk2Out twMaxEdge CDATA #REQUIRED>
+<!ATTLIST twClk2Out twInternalClk CDATA #REQUIRED>
+<!ATTLIST twClk2Out twClkPhase CDATA #REQUIRED>
+<!ELEMENT twClk2SUList (twDest, twClk2SU+)>
+<!ATTLIST twClk2SUList twDestWidth CDATA #IMPLIED>
+<!ELEMENT twClk2SU (twSrc, twRiseRise?, twFallRise?, twRiseFall?, twFallFall?)>
+<!ELEMENT twRiseRise (#PCDATA)>
+<!ELEMENT twFallRise (#PCDATA)>
+<!ELEMENT twRiseFall (#PCDATA)>
+<!ELEMENT twFallFall (#PCDATA)>
+<!ELEMENT twPad2PadList (twPad2Pad+)>
+<!ATTLIST twPad2PadList twSrcWidth CDATA #IMPLIED>
+<!ATTLIST twPad2PadList twDestWidth CDATA #IMPLIED>
+<!ELEMENT twPad2Pad (twSrc, twDest, twDel)>
+<!ELEMENT twOffsetTables (twOffsetInTable*,twOffsetOutTable*)>
+<!ELEMENT twOffsetInTable (twConstName, twOffInTblRow*)>
+<!ATTLIST twOffsetInTable twDestWidth CDATA #IMPLIED>
+<!ATTLIST twOffsetInTable twWorstWindow CDATA #IMPLIED>
+<!ATTLIST twOffsetInTable twWorstSetup CDATA #IMPLIED>
+<!ATTLIST twOffsetInTable twWorstHold CDATA #IMPLIED>
+<!ATTLIST twOffsetInTable twWorstSetupSlack CDATA #IMPLIED>
+<!ATTLIST twOffsetInTable twWorstHoldSlack CDATA #IMPLIED>
+<!ELEMENT twOffsetOutTable (twConstName, twOffOutTblRow*)>
+<!ATTLIST twOffsetOutTable twDestWidth CDATA #IMPLIED>
+<!ATTLIST twOffsetOutTable twMinSlack CDATA #IMPLIED>
+<!ATTLIST twOffsetOutTable twMaxSlack CDATA #IMPLIED>
+<!ATTLIST twOffsetOutTable twRelSkew CDATA #IMPLIED>
+<!ELEMENT twOffInTblRow (twSrc, twSUHSlackTime*)>       
+<!ELEMENT twSUHSlackTime (twSU2ClkTime?,twH2ClkTime?)>
+<!ATTLIST twSUHSlackTime twSetupSlack CDATA #IMPLIED  twHoldSlack CDATA #IMPLIED>
+<!ELEMENT twOffOutTblRow EMPTY>
+<!ATTLIST twOffOutTblRow twOutPad CDATA #IMPLIED>
+<!ATTLIST twOffOutTblRow twSlack CDATA #IMPLIED>
+<!ATTLIST twOffOutTblRow twRelSkew CDATA #IMPLIED>
+<!ELEMENT twNonDedClks ((twWarn | twInfo), twNonDedClk+)>
+<!ELEMENT twNonDedClk (#PCDATA)>
+<!ELEMENT twSum ( twErrCnt, twScore, twConstCov, twStats)>
+<!ELEMENT twScore (#PCDATA)>
+<!ELEMENT twConstCov (twPathCnt, twNetCnt, twConnCnt, twPct?)>
+<!ELEMENT twPathCnt (#PCDATA)>
+<!ELEMENT twNetCnt (#PCDATA)>
+<!ELEMENT twConnCnt (#PCDATA)>
+<!ELEMENT twPct (#PCDATA)>
+<!ELEMENT twStats ( twMinPer?, twFootnote?, twMaxFreq?, twMaxCombDel?, twMaxFromToDel?, twMaxNetDel?, twMaxNetSkew?, twMaxInAfterClk?, twMinInBeforeClk?, twMaxOutBeforeClk?, twMinOutAfterClk?, (twInfo | twWarn)*)>
+<!ELEMENT twMaxCombDel (#PCDATA)>
+<!ELEMENT twMaxFromToDel (#PCDATA)>
+<!ELEMENT twMaxNetDel (#PCDATA)>
+<!ELEMENT twMaxNetSkew (#PCDATA)>
+<!ELEMENT twMaxInAfterClk (#PCDATA)>
+<!ELEMENT twMinInBeforeClk (#PCDATA)>
+<!ELEMENT twMaxOutBeforeClk (#PCDATA)>
+<!ELEMENT twMinOutAfterClk (#PCDATA)>
+<!ELEMENT twFoot (twFootnoteExplanation*, twTimestamp)>
+<!ELEMENT twTimestamp (#PCDATA)>
+<!ELEMENT twFootnoteExplanation EMPTY>
+<!ATTLIST twFootnoteExplanation number CDATA #REQUIRED>
+<!ATTLIST twFootnoteExplanation text CDATA #REQUIRED>
+<!ELEMENT twClientInfo (twClientName, twAttrList?)>
+<!ELEMENT twClientName (#PCDATA)>
+<!ELEMENT twAttrList (twAttrListItem)*>
+<!ELEMENT twAttrListItem (twName, twValue*)>
+<!ELEMENT twName (#PCDATA)>
+<!ELEMENT twValue (#PCDATA)>
+]>
+<twReport><twHead anchorID="1"><twExecVer>14.7</twExecVer><twCopyright>Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.</twCopyright><twDesign>C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\DistRam\RAM_D.ncd</twDesign><twDesignPath>C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\DistRam\RAM_D.ncd</twDesignPath><twPCF>C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\DistRam\RAM_D.pcf</twPCF><twPcfPath>C:\Users\marco\Documents\ESCOM\QUINTO SEMESTRE\ARQUITECTURA DE COMPUTADORAS\DistRam\RAM_D.pcf</twPcfPath><twDevInfo arch="artix7" pkg="csg324"><twDevName>xc7a100t</twDevName><twDevRange>C</twDevRange><twSpeedGrade>-2</twSpeedGrade><twSpeedVer>PRODUCTION 1.10 2013-10-13</twSpeedVer><twQuadDly>1</twQuadDly></twDevInfo><twRptInfo twRptLvl="twVerbose" twAdvRpt="TRUE" twReportMinPaths="true"  dlyHyperLnks="t" ></twRptInfo><twEnvVar name="NONE" description="No environment variables were set" /></twHead><twInfo anchorID="2">INFO:Timing:2700 - Timing constraints ignored because advanced analysis with offsets was specified.</twInfo><twInfo anchorID="3">INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).</twInfo><twInfo anchorID="4">INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths option. All paths that are not constrained will be reported in the unconstrained paths section(s) of the report.</twInfo><twInfo anchorID="5">INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a 50 Ohm transmission line loading model.  For the details of this model, and for more information on accounting for different loading conditions, please see the device datasheet.</twInfo><twBody><twVerboseRpt><twConst anchorID="6" twConstType="OFFSETINCLOCK" ><twConstHead uID="2"><twConstName UCFConstName="" ScopeName="">Default OFFSET IN BEFORE analysis for clock &quot;CLK_BUFGP&quot; </twConstName><twItemCnt>640</twItemCnt><twErrCntSetup>0</twErrCntSetup><twErrCntEndPt>0</twErrCntEndPt><twErrCntHold twRaceChecked="FALSE">0</twErrCntHold><twErrCntPinLimit>0</twErrCntPinLimit><twEndPtCnt>640</twEndPtCnt><twPathErrCnt>0</twPathErrCnt><twMinOff>1.042</twMinOff></twConstHead><twPathRpt anchorID="7"><twUnconstOffIn anchorID="8" twDataPathType="twDataPathMaxDelay"><twOff>1.042</twOff><twSrc BELType="PAD">WD</twSrc><twDest BELType="RAM">Mram_MEM1/B</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twDataPath maxSiteLen="16" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>WD</twSrc><twDest BELType='RAM'>Mram_MEM1/B</twDest><twLogLvls>1</twLogLvls><twSrcSite>C17.PAD</twSrcSite><twPathDel><twSite>C17.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twFalling">0.413</twDelInfo><twComp>WD</twComp><twBEL>WD</twBEL><twBEL>WD_IBUF</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CE</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twFalling">1.855</twDelInfo><twComp>WD_IBUF</twComp></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>Tceck</twDelType><twDelInfo twEdge="twFalling">0.216</twDelInfo><twComp>DOUT_0_OBUF</twComp><twBEL>Mram_MEM1/B</twBEL></twPathDel><twLogDel>0.629</twLogDel><twRouteDel>1.855</twRouteDel><twTotDel>2.484</twTotDel><twDestClk twEdge ="twRising">CLK_BUFGP</twDestClk><twPctLog>25.3</twPctLog><twPctRoute>74.7</twPctRoute></twDataPath><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM1/B</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.203</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.644</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.026</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">0.594</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.229</twLogDel><twRouteDel>1.238</twRouteDel><twTotDel>1.467</twTotDel><twPctLog>15.6</twPctLog><twPctRoute>84.4</twPctRoute></twClkPath></twUnconstOffIn></twPathRpt><twPathRpt anchorID="9"><twUnconstOffIn anchorID="10" twDataPathType="twDataPathMaxDelay"><twOff>1.042</twOff><twSrc BELType="PAD">WD</twSrc><twDest BELType="RAM">Mram_MEM1/A</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twDataPath maxSiteLen="16" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>WD</twSrc><twDest BELType='RAM'>Mram_MEM1/A</twDest><twLogLvls>1</twLogLvls><twSrcSite>C17.PAD</twSrcSite><twPathDel><twSite>C17.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twFalling">0.413</twDelInfo><twComp>WD</twComp><twBEL>WD</twBEL><twBEL>WD_IBUF</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CE</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twFalling">1.855</twDelInfo><twComp>WD_IBUF</twComp></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>Tceck</twDelType><twDelInfo twEdge="twFalling">0.216</twDelInfo><twComp>DOUT_0_OBUF</twComp><twBEL>Mram_MEM1/A</twBEL></twPathDel><twLogDel>0.629</twLogDel><twRouteDel>1.855</twRouteDel><twTotDel>2.484</twTotDel><twDestClk twEdge ="twRising">CLK_BUFGP</twDestClk><twPctLog>25.3</twPctLog><twPctRoute>74.7</twPctRoute></twDataPath><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM1/A</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.203</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.644</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.026</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">0.594</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.229</twLogDel><twRouteDel>1.238</twRouteDel><twTotDel>1.467</twTotDel><twPctLog>15.6</twPctLog><twPctRoute>84.4</twPctRoute></twClkPath></twUnconstOffIn></twPathRpt><twPathRpt anchorID="11"><twUnconstOffIn anchorID="12" twDataPathType="twDataPathMaxDelay"><twOff>1.042</twOff><twSrc BELType="PAD">WD</twSrc><twDest BELType="RAM">Mram_MEM1/C</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twDataPath maxSiteLen="16" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>WD</twSrc><twDest BELType='RAM'>Mram_MEM1/C</twDest><twLogLvls>1</twLogLvls><twSrcSite>C17.PAD</twSrcSite><twPathDel><twSite>C17.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twFalling">0.413</twDelInfo><twComp>WD</twComp><twBEL>WD</twBEL><twBEL>WD_IBUF</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CE</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twFalling">1.855</twDelInfo><twComp>WD_IBUF</twComp></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>Tceck</twDelType><twDelInfo twEdge="twFalling">0.216</twDelInfo><twComp>DOUT_0_OBUF</twComp><twBEL>Mram_MEM1/C</twBEL></twPathDel><twLogDel>0.629</twLogDel><twRouteDel>1.855</twRouteDel><twTotDel>2.484</twTotDel><twDestClk twEdge ="twRising">CLK_BUFGP</twDestClk><twPctLog>25.3</twPctLog><twPctRoute>74.7</twPctRoute></twDataPath><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM1/C</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.203</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.644</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.026</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">0.594</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.229</twLogDel><twRouteDel>1.238</twRouteDel><twTotDel>1.467</twTotDel><twPctLog>15.6</twPctLog><twPctRoute>84.4</twPctRoute></twClkPath></twUnconstOffIn></twPathRpt><twPathRptBanner sType="PathClass">Hold Paths: Default OFFSET IN BEFORE analysis for clock &quot;CLK_BUFGP&quot;
+
+</twPathRptBanner><twPathRpt anchorID="13"><twUnconstOffIn anchorID="14" twDataPathType="twDataPathMinDelay"><twOff>-3.086</twOff><twSrc BELType="PAD">DIN&lt;15&gt;</twSrc><twDest BELType="RAM">Mram_MEM16/D</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twDataPath maxSiteLen="16" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>DIN&lt;15&gt;</twSrc><twDest BELType='RAM'>Mram_MEM16/D</twDest><twLogLvls>1</twLogLvls><twSrcSite>H16.PAD</twSrcSite><twPathDel><twSite>H16.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.757</twDelInfo><twComp>DIN&lt;15&gt;</twComp><twBEL>DIN&lt;15&gt;</twBEL><twBEL>DIN_15_IBUF</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y123.DI</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.604</twDelInfo><twComp>DIN_15_IBUF</twComp></twPathDel><twPathDel twHoldTime="TRUE"><twSite>SLICE_X2Y123.CLK</twSite><twDelType>Tdh</twDelType><twDelInfo twEdge="twRising">-0.296</twDelInfo><twComp>DOUT_15_OBUF</twComp><twBEL>Mram_MEM16/D</twBEL></twPathDel><twLogDel>0.461</twLogDel><twRouteDel>0.604</twRouteDel><twTotDel>1.065</twTotDel><twDestClk twEdge ="twRising">CLK_BUFGP</twDestClk><twPctLog>43.3</twPctLog><twPctRoute>56.7</twPctRoute></twDataPath><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM16/D</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.906</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.717</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.081</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y123.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">1.423</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.987</twLogDel><twRouteDel>3.140</twRouteDel><twTotDel>4.127</twTotDel><twPctLog>23.9</twPctLog><twPctRoute>76.1</twPctRoute></twClkPath></twUnconstOffIn></twPathRpt><twPathRpt anchorID="15"><twUnconstOffIn anchorID="16" twDataPathType="twDataPathMinDelay"><twOff>-3.062</twOff><twSrc BELType="PAD">ADDR&lt;5&gt;</twSrc><twDest BELType="RAM">Mram_MEM9/B</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twDataPath maxSiteLen="16" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>ADDR&lt;5&gt;</twSrc><twDest BELType='RAM'>Mram_MEM9/B</twDest><twLogLvls>1</twLogLvls><twSrcSite>E15.PAD</twSrcSite><twPathDel><twSite>E15.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.766</twDelInfo><twComp>ADDR&lt;5&gt;</twComp><twBEL>ADDR&lt;5&gt;</twBEL><twBEL>ADDR_5_IBUF</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y128.D6</twSite><twDelType>net</twDelType><twFanCnt>64</twFanCnt><twDelInfo twEdge="twRising">0.671</twDelInfo><twComp>ADDR_5_IBUF</twComp></twPathDel><twPathDel twHoldTime="TRUE"><twSite>SLICE_X2Y128.CLK</twSite><twDelType>Tah</twDelType><twDelInfo twEdge="twRising">-0.345</twDelInfo><twComp>DOUT_8_OBUF</twComp><twBEL>Mram_MEM9/B</twBEL></twPathDel><twLogDel>0.421</twLogDel><twRouteDel>0.671</twRouteDel><twTotDel>1.092</twTotDel><twDestClk twEdge ="twRising">CLK_BUFGP</twDestClk><twPctLog>38.6</twPctLog><twPctRoute>61.4</twPctRoute></twDataPath><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM9/B</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.906</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.717</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.081</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y128.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">1.426</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.987</twLogDel><twRouteDel>3.143</twRouteDel><twTotDel>4.130</twTotDel><twPctLog>23.9</twPctLog><twPctRoute>76.1</twPctRoute></twClkPath></twUnconstOffIn></twPathRpt><twPathRpt anchorID="17"><twUnconstOffIn anchorID="18" twDataPathType="twDataPathMinDelay"><twOff>-3.062</twOff><twSrc BELType="PAD">ADDR&lt;5&gt;</twSrc><twDest BELType="RAM">Mram_MEM9/A</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twDataPath maxSiteLen="16" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>ADDR&lt;5&gt;</twSrc><twDest BELType='RAM'>Mram_MEM9/A</twDest><twLogLvls>1</twLogLvls><twSrcSite>E15.PAD</twSrcSite><twPathDel><twSite>E15.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.766</twDelInfo><twComp>ADDR&lt;5&gt;</twComp><twBEL>ADDR&lt;5&gt;</twBEL><twBEL>ADDR_5_IBUF</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y128.D6</twSite><twDelType>net</twDelType><twFanCnt>64</twFanCnt><twDelInfo twEdge="twRising">0.671</twDelInfo><twComp>ADDR_5_IBUF</twComp></twPathDel><twPathDel twHoldTime="TRUE"><twSite>SLICE_X2Y128.CLK</twSite><twDelType>Tah</twDelType><twDelInfo twEdge="twRising">-0.345</twDelInfo><twComp>DOUT_8_OBUF</twComp><twBEL>Mram_MEM9/A</twBEL></twPathDel><twLogDel>0.421</twLogDel><twRouteDel>0.671</twRouteDel><twTotDel>1.092</twTotDel><twDestClk twEdge ="twRising">CLK_BUFGP</twDestClk><twPctLog>38.6</twPctLog><twPctRoute>61.4</twPctRoute></twDataPath><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM9/A</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.906</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.717</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.081</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y128.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">1.426</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.987</twLogDel><twRouteDel>3.143</twRouteDel><twTotDel>4.130</twTotDel><twPctLog>23.9</twPctLog><twPctRoute>76.1</twPctRoute></twClkPath></twUnconstOffIn></twPathRpt></twConst><twConst anchorID="19" twConstType="OFFSETOUTCLOCK" ><twConstHead uID="3"><twConstName UCFConstName="" ScopeName="">Default OFFSET OUT AFTER analysis for clock &quot;CLK_BUFGP&quot; </twConstName><twItemCnt>64</twItemCnt><twErrCntSetup>0</twErrCntSetup><twErrCntEndPt>0</twErrCntEndPt><twErrCntHold twRaceChecked="FALSE">0</twErrCntHold><twErrCntPinLimit>0</twErrCntPinLimit><twEndPtCnt>16</twEndPtCnt><twPathErrCnt>0</twPathErrCnt><twMaxOff>9.926</twMaxOff></twConstHead><twPathRpt anchorID="20"><twUnconstOffOut anchorID="21" twDataPathType="twDataPathMaxDelay"><twOff>9.926</twOff><twSrc BELType="RAM">Mram_MEM16/D</twSrc><twDest BELType="PAD">DOUT&lt;15&gt;</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM16/D</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.906</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.717</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.081</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y123.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">1.423</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.987</twLogDel><twRouteDel>3.140</twRouteDel><twTotDel>4.127</twTotDel><twPctLog>23.9</twPctLog><twPctRoute>76.1</twPctRoute></twClkPath><twDataPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='RAM'>Mram_MEM16/D</twSrc><twDest BELType='PAD'>DOUT&lt;15&gt;</twDest><twLogLvls>1</twLogLvls><twSrcSite>SLICE_X2Y123.CLK</twSrcSite><twSrcClk twEdge ="twRising">CLK_BUFGP</twSrcClk><twPathDel><twSite>SLICE_X2Y123.BMUX</twSite><twDelType>Tshcko</twDelType><twDelInfo twEdge="twRising">1.528</twDelInfo><twComp>DOUT_15_OBUF</twComp><twBEL>Mram_MEM16/D</twBEL><twBEL>Mram_MEM16/F7.B</twBEL><twBEL>Mram_MEM16/F8</twBEL></twPathDel><twPathDel><twSite>C16.O</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.839</twDelInfo><twComp>DOUT_15_OBUF</twComp></twPathDel><twPathDel><twSite>C16.PAD</twSite><twDelType>Tioop</twDelType><twDelInfo twEdge="twRising">2.407</twDelInfo><twComp>DOUT&lt;15&gt;</twComp><twBEL>DOUT_15_OBUF</twBEL><twBEL>DOUT&lt;15&gt;</twBEL></twPathDel><twLogDel>3.935</twLogDel><twRouteDel>1.839</twRouteDel><twTotDel>5.774</twTotDel><twPctLog>68.2</twPctLog><twPctRoute>31.8</twPctRoute></twDataPath></twUnconstOffOut></twPathRpt><twPathRpt anchorID="22"><twUnconstOffOut anchorID="23" twDataPathType="twDataPathMaxDelay"><twOff>9.924</twOff><twSrc BELType="RAM">Mram_MEM16/C</twSrc><twDest BELType="PAD">DOUT&lt;15&gt;</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM16/C</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.906</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.717</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.081</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y123.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">1.423</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.987</twLogDel><twRouteDel>3.140</twRouteDel><twTotDel>4.127</twTotDel><twPctLog>23.9</twPctLog><twPctRoute>76.1</twPctRoute></twClkPath><twDataPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='RAM'>Mram_MEM16/C</twSrc><twDest BELType='PAD'>DOUT&lt;15&gt;</twDest><twLogLvls>1</twLogLvls><twSrcSite>SLICE_X2Y123.CLK</twSrcSite><twSrcClk twEdge ="twRising">CLK_BUFGP</twSrcClk><twPathDel><twSite>SLICE_X2Y123.BMUX</twSite><twDelType>Tshcko</twDelType><twDelInfo twEdge="twRising">1.526</twDelInfo><twComp>DOUT_15_OBUF</twComp><twBEL>Mram_MEM16/C</twBEL><twBEL>Mram_MEM16/F7.B</twBEL><twBEL>Mram_MEM16/F8</twBEL></twPathDel><twPathDel><twSite>C16.O</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.839</twDelInfo><twComp>DOUT_15_OBUF</twComp></twPathDel><twPathDel><twSite>C16.PAD</twSite><twDelType>Tioop</twDelType><twDelInfo twEdge="twRising">2.407</twDelInfo><twComp>DOUT&lt;15&gt;</twComp><twBEL>DOUT_15_OBUF</twBEL><twBEL>DOUT&lt;15&gt;</twBEL></twPathDel><twLogDel>3.933</twLogDel><twRouteDel>1.839</twRouteDel><twTotDel>5.772</twTotDel><twPctLog>68.1</twPctLog><twPctRoute>31.9</twPctRoute></twDataPath></twUnconstOffOut></twPathRpt><twPathRpt anchorID="24"><twUnconstOffOut anchorID="25" twDataPathType="twDataPathMaxDelay"><twOff>9.896</twOff><twSrc BELType="RAM">Mram_MEM15/D</twSrc><twDest BELType="PAD">DOUT&lt;14&gt;</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM15/D</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.906</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.717</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.081</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y124.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">1.422</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.987</twLogDel><twRouteDel>3.139</twRouteDel><twTotDel>4.126</twTotDel><twPctLog>23.9</twPctLog><twPctRoute>76.1</twPctRoute></twClkPath><twDataPath maxSiteLen="17" twPathCritProcCorner=" at Slow Process Corner"><twSrc BELType='RAM'>Mram_MEM15/D</twSrc><twDest BELType='PAD'>DOUT&lt;14&gt;</twDest><twLogLvls>1</twLogLvls><twSrcSite>SLICE_X2Y124.CLK</twSrcSite><twSrcClk twEdge ="twRising">CLK_BUFGP</twSrcClk><twPathDel><twSite>SLICE_X2Y124.BMUX</twSite><twDelType>Tshcko</twDelType><twDelInfo twEdge="twRising">1.528</twDelInfo><twComp>DOUT_14_OBUF</twComp><twBEL>Mram_MEM15/D</twBEL><twBEL>Mram_MEM15/F7.B</twBEL><twBEL>Mram_MEM15/F8</twBEL></twPathDel><twPathDel><twSite>H15.O</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">1.839</twDelInfo><twComp>DOUT_14_OBUF</twComp></twPathDel><twPathDel><twSite>H15.PAD</twSite><twDelType>Tioop</twDelType><twDelInfo twEdge="twRising">2.378</twDelInfo><twComp>DOUT&lt;14&gt;</twComp><twBEL>DOUT_14_OBUF</twBEL><twBEL>DOUT&lt;14&gt;</twBEL></twPathDel><twLogDel>3.906</twLogDel><twRouteDel>1.839</twRouteDel><twTotDel>5.745</twTotDel><twPctLog>68.0</twPctLog><twPctRoute>32.0</twPctRoute></twDataPath></twUnconstOffOut></twPathRpt><twPathRptBanner sType="PathClass">Fastest Paths: Default OFFSET OUT AFTER analysis for clock &quot;CLK_BUFGP&quot;
+
+</twPathRptBanner><twPathRpt anchorID="26"><twUnconstOffOut anchorID="27" twDataPathType="twDataPathMinDelay"><twOff>3.454</twOff><twSrc BELType="RAM">Mram_MEM1/B</twSrc><twDest BELType="PAD">DOUT&lt;0&gt;</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM1/B</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.203</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.644</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.026</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">0.594</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.229</twLogDel><twRouteDel>1.238</twRouteDel><twTotDel>1.467</twTotDel><twPctLog>15.6</twPctLog><twPctRoute>84.4</twPctRoute></twClkPath><twDataPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='RAM'>Mram_MEM1/B</twSrc><twDest BELType='PAD'>DOUT&lt;0&gt;</twDest><twLogLvls>1</twLogLvls><twSrcSite>SLICE_X6Y137.CLK</twSrcSite><twSrcClk twEdge ="twRising">CLK_BUFGP</twSrcClk><twPathDel><twSite>SLICE_X6Y137.BMUX</twSite><twDelType>Tshcko</twDelType><twDelInfo twEdge="twRising">0.537</twDelInfo><twComp>DOUT_0_OBUF</twComp><twBEL>Mram_MEM1/B</twBEL><twBEL>Mram_MEM1/F7.A</twBEL><twBEL>Mram_MEM1/F8</twBEL></twPathDel><twPathDel><twSite>D13.O</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.322</twDelInfo><twComp>DOUT_0_OBUF</twComp></twPathDel><twPathDel><twSite>D13.PAD</twSite><twDelType>Tioop</twDelType><twDelInfo twEdge="twRising">1.153</twDelInfo><twComp>DOUT&lt;0&gt;</twComp><twBEL>DOUT_0_OBUF</twBEL><twBEL>DOUT&lt;0&gt;</twBEL></twPathDel><twLogDel>1.690</twLogDel><twRouteDel>0.322</twRouteDel><twTotDel>2.012</twTotDel><twPctLog>84.0</twPctLog><twPctRoute>16.0</twPctRoute></twDataPath></twUnconstOffOut></twPathRpt><twPathRpt anchorID="28"><twUnconstOffOut anchorID="29" twDataPathType="twDataPathMinDelay"><twOff>3.463</twOff><twSrc BELType="RAM">Mram_MEM2/B</twSrc><twDest BELType="PAD">DOUT&lt;1&gt;</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM2/B</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.203</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.644</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.026</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X2Y137.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">0.595</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.229</twLogDel><twRouteDel>1.239</twRouteDel><twTotDel>1.468</twTotDel><twPctLog>15.6</twPctLog><twPctRoute>84.4</twPctRoute></twClkPath><twDataPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='RAM'>Mram_MEM2/B</twSrc><twDest BELType='PAD'>DOUT&lt;1&gt;</twDest><twLogLvls>1</twLogLvls><twSrcSite>SLICE_X2Y137.CLK</twSrcSite><twSrcClk twEdge ="twRising">CLK_BUFGP</twSrcClk><twPathDel><twSite>SLICE_X2Y137.BMUX</twSite><twDelType>Tshcko</twDelType><twDelInfo twEdge="twRising">0.537</twDelInfo><twComp>DOUT_1_OBUF</twComp><twBEL>Mram_MEM2/B</twBEL><twBEL>Mram_MEM2/F7.A</twBEL><twBEL>Mram_MEM2/F8</twBEL></twPathDel><twPathDel><twSite>D12.O</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.323</twDelInfo><twComp>DOUT_1_OBUF</twComp></twPathDel><twPathDel><twSite>D12.PAD</twSite><twDelType>Tioop</twDelType><twDelInfo twEdge="twRising">1.160</twDelInfo><twComp>DOUT&lt;1&gt;</twComp><twBEL>DOUT_1_OBUF</twBEL><twBEL>DOUT&lt;1&gt;</twBEL></twPathDel><twLogDel>1.697</twLogDel><twRouteDel>0.323</twRouteDel><twTotDel>2.020</twTotDel><twPctLog>84.0</twPctLog><twPctRoute>16.0</twPctRoute></twDataPath></twUnconstOffOut></twPathRpt><twPathRpt anchorID="30"><twUnconstOffOut anchorID="31" twDataPathType="twDataPathMinDelay"><twOff>3.468</twOff><twSrc BELType="RAM">Mram_MEM1/C</twSrc><twDest BELType="PAD">DOUT&lt;0&gt;</twDest><twClkUncert fSysJit="0.050" fInputJit="0.000" fDCMJit="0.000" fPhaseErr="0.000" sEqu="((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE">0.025</twClkUncert><twClkPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='PAD'>CLK</twSrc><twDest BELType='RAM'>Mram_MEM1/C</twDest><twLogLvls>2</twLogLvls><twSrcSite>D5.PAD</twSrcSite><twPathDel><twSite>D5.I</twSite><twDelType>Tiopi</twDelType><twDelInfo twEdge="twRising">0.203</twDelInfo><twComp>CLK</twComp><twBEL>CLK</twBEL><twBEL>CLK_BUFGP/IBUFG</twBEL></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.I0</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.644</twDelInfo><twComp>CLK_BUFGP/IBUFG</twComp></twPathDel><twPathDel><twSite>BUFGCTRL_X0Y31.O</twSite><twDelType>Tbccko_O</twDelType><twDelInfo twEdge="twRising">0.026</twDelInfo><twComp>CLK_BUFGP/BUFG</twComp><twBEL>CLK_BUFGP/BUFG</twBEL></twPathDel><twPathDel><twSite>SLICE_X6Y137.CLK</twSite><twDelType>net</twDelType><twFanCnt>16</twFanCnt><twDelInfo twEdge="twRising">0.594</twDelInfo><twComp>CLK_BUFGP</twComp></twPathDel><twLogDel>0.229</twLogDel><twRouteDel>1.238</twRouteDel><twTotDel>1.467</twTotDel><twPctLog>15.6</twPctLog><twPctRoute>84.4</twPctRoute></twClkPath><twDataPath maxSiteLen="17" twPathCritProcCorner=" at Fast Process Corner"><twSrc BELType='RAM'>Mram_MEM1/C</twSrc><twDest BELType='PAD'>DOUT&lt;0&gt;</twDest><twLogLvls>1</twLogLvls><twSrcSite>SLICE_X6Y137.CLK</twSrcSite><twSrcClk twEdge ="twRising">CLK_BUFGP</twSrcClk><twPathDel><twSite>SLICE_X6Y137.BMUX</twSite><twDelType>Tshcko</twDelType><twDelInfo twEdge="twRising">0.551</twDelInfo><twComp>DOUT_0_OBUF</twComp><twBEL>Mram_MEM1/C</twBEL><twBEL>Mram_MEM1/F7.B</twBEL><twBEL>Mram_MEM1/F8</twBEL></twPathDel><twPathDel><twSite>D13.O</twSite><twDelType>net</twDelType><twFanCnt>1</twFanCnt><twDelInfo twEdge="twRising">0.322</twDelInfo><twComp>DOUT_0_OBUF</twComp></twPathDel><twPathDel><twSite>D13.PAD</twSite><twDelType>Tioop</twDelType><twDelInfo twEdge="twRising">1.153</twDelInfo><twComp>DOUT&lt;0&gt;</twComp><twBEL>DOUT_0_OBUF</twBEL><twBEL>DOUT&lt;0&gt;</twBEL></twPathDel><twLogDel>1.704</twLogDel><twRouteDel>0.322</twRouteDel><twTotDel>2.026</twTotDel><twPctLog>84.1</twPctLog><twPctRoute>15.9</twPctRoute></twDataPath></twUnconstOffOut></twPathRpt></twConst><twUnmetConstCnt anchorID="32">0</twUnmetConstCnt><twDataSheet anchorID="33" twNameLen="15"><twSUH2ClkList anchorID="34" twDestWidth="7" twPhaseWidth="9"><twDest>CLK</twDest><twSUH2Clk ><twSrc>ADDR&lt;0&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.883</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.777</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>ADDR&lt;1&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.928</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.742</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>ADDR&lt;2&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.692</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.632</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>ADDR&lt;3&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.101</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.906</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>ADDR&lt;4&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.692</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.621</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>ADDR&lt;5&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.209</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">3.063</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>ADDR&lt;6&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.565</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.779</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>ADDR&lt;7&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">0.318</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">3.005</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;0&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.046</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.735</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;1&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.296</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.963</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;2&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.133</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.764</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;3&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.295</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.959</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;4&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.194</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.875</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;5&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.230</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.929</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;6&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.128</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.781</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;7&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.250</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.958</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;8&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.213</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.893</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;9&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.211</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.907</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;10&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.235</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.927</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;11&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.285</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.969</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;12&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.166</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.805</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;13&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.305</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.990</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;14&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.252</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.957</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>DIN&lt;15&gt;</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">-0.353</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">3.087</twH2ClkTime></twSUHTime></twSUH2Clk><twSUH2Clk ><twSrc>WD</twSrc><twSUHTime twInternalClk ="CLK_BUFGP" twClkPhase ="0.000" ><twSU2ClkTime twEdge="twRising" twCrnrFst="t">1.042</twSU2ClkTime><twH2ClkTime twEdge="twRising" twCrnrFst="f">2.354</twH2ClkTime></twSUHTime></twSUH2Clk></twSUH2ClkList><twClk2OutList anchorID="35" twDestWidth="8" twPhaseWidth="9"><twSrc>CLK</twSrc><twClk2Out  twOutPad = "DOUT&lt;0&gt;" twMinTime = "3.454" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.455" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;1&gt;" twMinTime = "3.463" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.456" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;2&gt;" twMinTime = "3.533" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.591" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;3&gt;" twMinTime = "3.629" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.795" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;4&gt;" twMinTime = "3.536" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.594" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;5&gt;" twMinTime = "3.626" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.793" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;6&gt;" twMinTime = "3.512" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.568" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;7&gt;" twMinTime = "3.690" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.854" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;8&gt;" twMinTime = "3.671" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.837" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;9&gt;" twMinTime = "3.602" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.759" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;10&gt;" twMinTime = "3.651" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.816" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;11&gt;" twMinTime = "3.618" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.783" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;12&gt;" twMinTime = "3.667" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.836" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;13&gt;" twMinTime = "3.632" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.771" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;14&gt;" twMinTime = "3.667" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.896" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out><twClk2Out  twOutPad = "DOUT&lt;15&gt;" twMinTime = "3.696" twMinCrnr="t" twMinEdge ="twRising" twMaxTime = "9.926" twMaxCrnr="f" twMaxEdge ="twRising" twInternalClk="CLK_BUFGP" twClkPhase="0.000" ></twClk2Out></twClk2OutList><twOffsetTables></twOffsetTables></twDataSheet></twVerboseRpt></twBody><twSum anchorID="36"><twErrCnt>0</twErrCnt><twScore>0</twScore><twSetupScore>0</twSetupScore><twHoldScore>0</twHoldScore><twConstCov><twPathCnt>704</twPathCnt><twNetCnt>0</twNetCnt><twConnCnt>193</twConnCnt></twConstCov><twStats anchorID="37"><twMinInBeforeClk>1.042</twMinInBeforeClk><twMaxOutBeforeClk>9.926</twMaxOutBeforeClk></twStats></twSum><twFoot><twTimestamp>Thu Oct 04 18:51:56 2018 </twTimestamp></twFoot><twClientInfo anchorID="38"><twClientName>Timing Analyzer</twClientName><twAttrList><twAttrListItem><twName>Timing Analyzer Settings</twName><twValue>
+
+analysis_name  &quot;Analysis 1&quot;
+analysis_type  &quot;auto-generated timing constraints&quot;
+analysis_speed  -2
+analysis_voltage  0.950000
+analysis_temperature  85.000000
+
+analyze_unconstrained_paths  false
+analzye_component_switching_limits  true
+
+report_datasheet  true
+report_timegroups  false
+report_constraints_interaction  false
+
+paths_per_constraint  3
+
+
+Peak Memory Usage: 5248 MB
+</twValue></twAttrListItem></twAttrList></twClientInfo></twReport>

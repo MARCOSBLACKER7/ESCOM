@@ -1,0 +1,41 @@
+xst -intstyle ise -ifn "C:/Xilinx/DistRam/RAM_D.xst" -ofn "C:/Xilinx/DistRam/RAM_D.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/DistRam/RAM_D.xst" -ofn "C:/Xilinx/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml RAM_D.twx RAM_D.ncd -o RAM_D.twr RAM_D.pcf 
+bitgen -intstyle ise -f RAM_D.ut RAM_D.ncd 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml RAM_D.twx RAM_D.ncd -o RAM_D.twr RAM_D.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml RAM_D.twx RAM_D.ncd -o RAM_D.twr RAM_D.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml RAM_D.twx RAM_D.ncd -o RAM_D.twr RAM_D.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml RAM_D.twx RAM_D.ncd -o RAM_D.twr RAM_D.pcf 
+bitgen -intstyle ise -f RAM_D.ut RAM_D.ncd 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/DistRam/RAM_D.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "RAM_D.ngc" RAM_D.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RAM_D_map.ncd RAM_D.ngd RAM_D.pcf 
+par -w -intstyle ise -ol high -mt off RAM_D_map.ncd RAM_D.ncd RAM_D.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml RAM_D.twx RAM_D.ncd -o RAM_D.twr RAM_D.pcf 

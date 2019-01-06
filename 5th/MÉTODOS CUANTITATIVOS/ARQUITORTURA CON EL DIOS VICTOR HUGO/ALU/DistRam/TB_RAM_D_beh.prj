@@ -1,0 +1,2 @@
+vhdl work "DIST_RAM.vhd"
+vhdl work "TestBench.vhd"
