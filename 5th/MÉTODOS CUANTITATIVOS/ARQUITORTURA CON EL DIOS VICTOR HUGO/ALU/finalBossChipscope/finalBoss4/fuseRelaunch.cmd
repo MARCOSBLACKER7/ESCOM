@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/counter_tb_isim_beh.exe" -prj "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/counter_tb_beh.prj" "work.counter_tb" 

@@ -1,0 +1,6 @@
+vhdl isim_temp "src/control/Paquete_Control.vhd"
+vhdl isim_temp "src/control/mem_opcode.vhd"
+vhdl isim_temp "src/control/mem_fun.vhd"
+vhdl isim_temp "src/control/FSM_control.vhd"
+vhdl isim_temp "src/control/Deco_Instruccion.vhd"
+vhdl isim_temp "src/control/Control.vhd"

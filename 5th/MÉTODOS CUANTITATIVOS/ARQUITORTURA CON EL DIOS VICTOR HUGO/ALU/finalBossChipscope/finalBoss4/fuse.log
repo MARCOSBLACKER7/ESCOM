@@ -1,0 +1,50 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/counter_tb_isim_beh.exe -prj C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/counter_tb_beh.prj work.counter_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/control/Paquete_Control.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/control/mem_opcode.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/control/mem_fun.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/control/FSM_control.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/control/Deco_Instruccion.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/barrel_shifter.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/stack.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/program_memory.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/MEMORIA_DATOS.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/file_register.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/DIVISOR.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/control/Control.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/components.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/alu.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/src/main.vhd" into library work
+Parsing VHDL file "C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/counter_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package components
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package paquete_control
+Compiling package numeric_std
+Compiling architecture behavioral of entity DIVISOR [\DIVISOR(10)\]
+Compiling architecture behavioral of entity Deco_Instruccion [deco_instruccion_default]
+Compiling architecture arch of entity mem_fun [\mem_fun(4,20)\]
+Compiling architecture arch of entity mem_opcode [\mem_opcode(5,20)\]
+Compiling architecture behavioral of entity FSM_control [fsm_control_default]
+Compiling architecture behavioral of entity Control [control_default]
+Compiling architecture behavioral of entity barrel_shifter [\barrel_shifter(16,4)\]
+Compiling architecture arch of entity file_register [\file_register(16,4)\]
+Compiling architecture ua of entity ALU [\ALU(16)\]
+Compiling architecture behavior of entity program_memory [\program_memory(8,25)\]
+Compiling architecture ramd of entity MEMORIA_DATOS [\MEMORIA_DATOS(16,8)\]
+Compiling architecture program of entity stack [\stack(16,4)\]
+Compiling architecture behavioral of entity main [\main(8)\]
+Compiling architecture behavior of entity counter_tb
+Time Resolution for simulation is 1ps.
+Waiting for 12 sub-compilation(s) to finish...
+Compiled 34 VHDL Units
+Built simulation executable C:/Users/marco/OneDrive/Escritorio/finalBossChipscope/finalBoss4/counter_tb_isim_beh.exe
+Fuse Memory Usage: 38188 KB
+Fuse CPU Usage: 1577 ms
