@@ -1,0 +1,405 @@
+import javax.swing.JOptionPane; 
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.image.Kernel;
+import java.awt.GridLayout;
+import javax.swing.BoxLayout;
+import java.awt.Insets;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.File;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTextField;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.awt.Image;
+import javax.swing.SwingConstants;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.image.ConvolveOp;
+
+
+
+
+public class MicroPhotoshop extends JFrame implements ActionListener, ChangeListener{
+	int slider;
+	ImageIcon imagenSeleccionada,otroicon,titulo;
+	JLabel imgOr, imgMod;
+	JTextField txtNombreImg;
+	BufferedImage imgsel;
+	JButton sepia,grises,azul,verde,rojo, negativo, cuartear,bn,brillo,posterizar,seg,seg2, rgbtogbr, warhol, info,seleccionar,guardar;
+	 String extension;
+	 BufferedImage imagen;
+	 JPanel efectos;
+	 JSlider spromedio;
+	 Filtros f = new Filtros();
+	 
+
+	public MicroPhotoshop() {
+		
+		extension ="JPG";
+		JPanel pprincipal = new JPanel();
+		pprincipal.setLayout(new BorderLayout());
+		JPanel ptitulo = new JPanel();
+		JLabel ltitulo = new JLabel("M\nI\nC\nR\nO\nP\nH\nO\nT\nO\nS\nH\nO\nP");
+		
+		ptitulo.add(ltitulo);
+		efectos= new JPanel(new GridLayout(2, 8, 10, 5));
+		sepia = new JButton("Sepia");
+		
+		grises = new JButton("Escala grises");
+		
+		azul = new JButton("Azul");
+		
+		verde = new JButton("Verde");
+		
+		rojo = new JButton("Rojo");
+		
+		negativo = new JButton("Negativo");
+		
+		cuartear = new JButton("Cuartear");
+		
+		bn =  new JButton("Blanco y negro");
+		
+		brillo = new JButton("Brillo");
+		
+		posterizar = new JButton("Posterizar");
+		
+		seg= new JButton("Segmentacion");
+		
+		seg2 = new JButton("RGB A RBG");
+		
+		rgbtogbr = new JButton("RGB A GBR");
+		
+		warhol = new JButton("warhol");
+		
+		info = new JButton("Acerca de");
+		
+		
+		efectos.add(sepia);
+		efectos.add(azul);
+		efectos.add(verde);
+		efectos.add(rojo);
+		efectos.add(negativo);
+		efectos.add(cuartear);
+		efectos.add(bn);
+		efectos.add(grises);
+		efectos.add(brillo);
+		efectos.add(posterizar);
+		efectos.add(seg);
+		efectos.add(seg2);
+		efectos.add(rgbtogbr);
+		efectos.add(warhol);
+		efectos.add(info);
+		JPanel pimagenes = new JPanel(new BorderLayout());
+		JSplitPane split = new JSplitPane();
+		split.setResizeWeight(0.5);
+		JPanel pimagenoriginal = new JPanel();
+		imgOr = new JLabel();
+		pimagenoriginal.add(imgOr);
+		JScrollPane spimgoriginal = new JScrollPane(pimagenoriginal);
+		split.setLeftComponent(spimgoriginal);
+		JPanel pimagengrises = new JPanel();
+		imgMod = new JLabel();
+		pimagengrises.add(imgMod);
+		JScrollPane spimggrises = new JScrollPane(pimagengrises);
+		split.setRightComponent(spimggrises);
+
+		pimagenes.add(split);
+		
+		
+		JPanel pselector = new JPanel();
+		txtNombreImg = new JTextField(30);
+		seleccionar = new JButton("Seleccionar");
+		guardar = new JButton("Guardar");
+		seleccionar.addActionListener(this);
+		sepia.addActionListener(this);
+		guardar.addActionListener(this);
+		grises.addActionListener(this);
+		azul. addActionListener(this);
+		verde.addActionListener(this);
+		rojo.addActionListener(this);
+		negativo.addActionListener(this);
+		cuartear.addActionListener(this);
+		bn.addActionListener(this);
+		brillo.addActionListener(this);
+		posterizar.addActionListener(this);
+		seg.addActionListener(this);
+		seg2.addActionListener(this);
+		rgbtogbr.addActionListener(this);
+		warhol.addActionListener(this);
+		info.addActionListener(this);
+		pselector.add(txtNombreImg);
+		pselector.add(seleccionar);
+		pselector.add(guardar);
+		
+		JPanel pescalar = new JPanel();
+		pescalar.setLayout(new BoxLayout(pescalar, BoxLayout.Y_AXIS));
+		spromedio = new JSlider(0, 255);
+		spromedio.setValue(3);
+		spromedio.setOrientation(SwingConstants.VERTICAL);
+		spromedio.addChangeListener(this);
+	
+
+		pescalar.add(spromedio);
+
+		pprincipal.add(ptitulo, BorderLayout.WEST);
+		pprincipal.add(pimagenes, BorderLayout.CENTER);
+		pprincipal.add(pselector, BorderLayout.SOUTH);
+		pprincipal.add(efectos, BorderLayout.NORTH);
+		pprincipal.add(pescalar,BorderLayout.EAST);
+		add(pprincipal);
+
+		setVisible(true);
+
+		
+
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setBounds(0, 0, 1300, 700);
+		setLocationRelativeTo(null);
+	}
+	
+	public void stateChanged(ChangeEvent arg0) {
+		 
+		if(slider==1){
+			
+				Image img = new ImageIcon(f.aplicarFiltroGrises(imgsel,spromedio)).getImage(); //convertimos icon en una imagen
+					
+				
+				if (img != null) {
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					ImageIcon otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+		
+		
+				}
+			}
+		if(slider==2){
+			
+				Image img = new ImageIcon(f.aplicarFiltroBrillo(imgsel,spromedio)).getImage(); //convertimos icon en una imagen
+					
+				
+				if (img != null) {
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					ImageIcon otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+		
+		
+				}
+			}
+		if(slider==3){
+			
+				Image img = new ImageIcon(f.aplicarFiltroPos(imgsel,spromedio)).getImage(); //convertimos icon en una imagen
+					
+				
+				if (img != null) {
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					ImageIcon otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+		
+		
+				}
+			}
+		
+		
+	}
+	public void actionPerformed(ActionEvent ee) {
+				
+				
+				JButton x=(JButton)ee.getSource();
+				JFileChooser selector = new JFileChooser("C:/Users/Z480/Documents");
+				
+				
+	if(x==seleccionar){
+			int r = selector.showOpenDialog(null);
+				if (r == JFileChooser.APPROVE_OPTION) {
+					try {
+						imgsel = ImageIO.read(selector.getSelectedFile());
+						imagenSeleccionada = new ImageIcon(imgsel);
+						//imgOr.setIcon(imagenSeleccionada);
+					Image img = imagenSeleccionada.getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					ImageIcon otroicon = new ImageIcon(otraimg);
+					imgOr.setIcon(otroicon);
+						
+					} catch (IOException e) {
+						
+						e.printStackTrace();
+					}
+		}}
+	if(x==guardar){
+			Image source = otroicon.getImage();
+			int w = source.getWidth(null);
+			int h = source.getHeight(null);
+			BufferedImage image = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
+			Graphics2D g2d = (Graphics2D)image.getGraphics();
+			g2d.drawImage(source, 0, 0, null);
+			g2d.dispose();
+		
+			int s = selector.showSaveDialog(null);
+			
+			if (s == JFileChooser.APPROVE_OPTION) {
+			File archivo=selector.getSelectedFile();
+
+	
+     try {
+		
+		
+      ImageIO.write(image, "jpg", archivo);
+	  JOptionPane.showMessageDialog (  null, "Imagen guardada exitosamente" ); 
+	  
+     } catch (IOException e) {
+      
+      e.printStackTrace();
+     }
+	 
+    }
+			}	
+	if(x==sepia){
+					Image img = new ImageIcon(f.aplicarFiltroSepia(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dandole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+				
+				}
+				
+			
+	if(x==grises){
+				JOptionPane.showMessageDialog (  null, "Utilice el slider" );
+				slider = 1;
+				
+			}
+	if(x==brillo){
+				JOptionPane.showMessageDialog (  null, "Utilice el slider" );
+				slider = 2;
+				
+			}
+	if(x==posterizar){
+		JOptionPane.showMessageDialog (  null, "Utilice el slider" );
+		slider = 3;
+	}
+	
+			
+	if(x==azul){
+		Image img = new ImageIcon(f.aplicarFiltroAzul(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dandole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+		
+	}	
+	if(x==verde){
+		Image img = new ImageIcon(f.aplicarFiltroVerde(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dandole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+		
+		
+		
+	}
+	if(x==rojo){
+		Image img = new ImageIcon(f.aplicarFiltroRojo(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+		
+		
+		
+	}
+	
+	if(x==negativo){
+		Image img = new ImageIcon(f.aplicarFiltroNegativo(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+		
+	}
+	if(x==cuartear){
+		
+		Image img = new ImageIcon(f.aplicarFiltroCuartear(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+		
+	}	
+	if(x==bn){
+		Image img = new ImageIcon(f.aplicarFiltroBN(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+	}
+	if(x==seg){
+		Image img = new ImageIcon(f.aplicarFiltroSeg(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+		
+	}	
+	if(x==seg2){
+	Image img = new ImageIcon(f.aplicarFiltroRGBtoRBG(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+		
+		
+		
+	
+			}
+	if(x==rgbtogbr){
+		Image img = new ImageIcon(f.aplicarFiltroRGBtoGBR(imgsel)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+	}
+	if(x==warhol){
+		int numero = Integer.parseInt( JOptionPane.showInputDialog(
+        null,"Introduzca un numero",
+        "Warhol",
+        JOptionPane.QUESTION_MESSAGE) );
+ 
+		
+		Image img = new ImageIcon(f.aplicarFiltroWarhol(imgsel,numero)).getImage(); //convertimos icon en una imagen
+					Image otraimg = img.getScaledInstance(600,650,java.awt.Image.SCALE_SMOOTH); //creamos una imagen nueva dándole las dimensiones que queramos a la antigua
+					otroicon = new ImageIcon(otraimg);
+					imgMod.setIcon(otroicon);
+					txtNombreImg.setText(selector.getSelectedFile().getName());
+	}
+	if(x==info){
+		JOptionPane.showMessageDialog (  null, "INFORMACION:\nProyecto: MicroPhotoshop\nNombre: Gomez Caballero Brenda\nMateria: Programacion orientada a objetos\nGrupo: 2CM4\n"); 
+	}
+	}
+	public static void main(String[] args) {
+		new MicroPhotoshop();
+	}
+
+}
