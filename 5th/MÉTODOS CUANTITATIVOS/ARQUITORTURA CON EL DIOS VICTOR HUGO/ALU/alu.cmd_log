@@ -1,0 +1,56 @@
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+netgen -intstyle ise -rpw 100 -tpw 0 -ar Structure -tm alu -w -dir netgen/translate -ofmt vhdl -sim alu.ngd alu_translate.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf CONSTRAINTS.ucf 
+bitgen -intstyle ise -f alu.ut alu.ncd 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf CONSTRAINTS.ucf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf CONSTRAINTS.ucf 
+bitgen -intstyle ise -f alu.ut alu.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf CONSTRAINTS.ucf 
+bitgen -intstyle ise -f alu.ut alu.ncd 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf CONSTRAINTS.ucf 
+bitgen -intstyle ise -f alu.ut alu.ncd 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf CONSTRAINTS.ucf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CONSTRAINTS.ucf -p xc7a100t-csg324-2 "alu.ngc" alu.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf CONSTRAINTS.ucf 
+bitgen -intstyle ise -f alu.ut alu.ncd 
+xst -intstyle ise -ifn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.xst" -ofn "C:/Users/marco/Documents/ESCOM/QUINTO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALU/alu.syr" 

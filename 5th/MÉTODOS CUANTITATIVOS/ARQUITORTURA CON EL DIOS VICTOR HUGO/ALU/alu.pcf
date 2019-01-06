@@ -1,0 +1,27 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Sep 18 11:47:35 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ans<0>" LOCATE = SITE "V16" LEVEL 1;
+COMP "ans<1>" LOCATE = SITE "T15" LEVEL 1;
+COMP "ans<2>" LOCATE = SITE "U14" LEVEL 1;
+COMP "ans<3>" LOCATE = SITE "T16" LEVEL 1;
+COMP "a<0>" LOCATE = SITE "T8" LEVEL 1;
+COMP "a<1>" LOCATE = SITE "U8" LEVEL 1;
+COMP "a<2>" LOCATE = SITE "R16" LEVEL 1;
+COMP "a<3>" LOCATE = SITE "T13" LEVEL 1;
+COMP "b<0>" LOCATE = SITE "J15" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "L16" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "b<3>" LOCATE = SITE "R15" LEVEL 1;
+COMP "flags<0>" LOCATE = SITE "H17" LEVEL 1;
+COMP "flags<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "aluop<0>" LOCATE = SITE "P18" LEVEL 1;
+COMP "flags<2>" LOCATE = SITE "J13" LEVEL 1;
+COMP "aluop<1>" LOCATE = SITE "M17" LEVEL 1;
+COMP "flags<3>" LOCATE = SITE "N14" LEVEL 1;
+COMP "aluop<2>" LOCATE = SITE "N17" LEVEL 1;
+COMP "aluop<3>" LOCATE = SITE "P17" LEVEL 1;
+SCHEMATIC END;
+

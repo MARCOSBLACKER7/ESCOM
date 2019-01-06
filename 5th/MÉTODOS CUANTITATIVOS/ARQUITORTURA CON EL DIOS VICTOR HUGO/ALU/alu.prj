@@ -1,0 +1,2 @@
+vhdl work "arith.vhd"
+vhdl work "ALU.vhd"
