@@ -1,0 +1,19 @@
+Drop table EMP;
+create table EMP (empleado_id intenger
+				CONSTRAINT EMP_ID_PK PRIMARY KEY,
+				First_name varchar2(20);
+				Last_name  varchar2(20);
+				Reporta_a integer);
+prompt tuplas
+				insert into EMP Values(1,'Nancy', 'Devolio', NULL);
+				insert into EMP Values(2,'Andrew', 'Fuller', 1);
+				insert into EMP Values(3,'Janet', 'Leverling', 1);
+				insert into EMP Values(4,'Margaret', 'Peacock', 1);
+				insert into EMP Values(5,'Steven', 'Rodriguez', 3);
+				insert into EMP Values(6,'Rosy', 'Buchanan', 5);
+				insert into EMP Values(7,'Mary', 'Sumaya', 6);
+prompt despliega empleados del jefe
+				select first_name, Last_name
+				from emp
+				where reporta_a = 1;
+prompt
