@@ -1,0 +1,23 @@
+Cypress Package: palce22v10-25pc/pi  PinOut File: ALARMAS.pin
+
+This file was created on 02/14/2018 at 19:43:00 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+a(2) in <> Enabled Normal 2 <> [User] 
+a(1) in <> Enabled Normal 3 <> [User] 
+a(0) in <> Enabled Normal 4 <> [User] 
+b(2) in <> Enabled Normal 5 <> [User] 
+b(1) in <> Enabled Normal 6 <> [User] 
+b(0) in <> Enabled Normal 7 <> [User] 
+ref(2) in <> Enabled Normal 8 <> [User] 
+ref(1) in <> Enabled Normal 9 <> [User] 
+ref(0) in <> Enabled Normal 10 <> [User] 
+sel in <> Enabled Normal 11 <> [User] 
+display(0) out <> Enabled Normal 15 <> [User] 
+display(1) out <> Enabled Normal 16 <> [User] 
+display(2) inout <> Enabled Normal 17 <> [User] 
+display(3) out <> Enabled Normal 18 <> [User] 
+display(4) out <> Enabled Normal 19 <> [User] 
+display(5) out <> Enabled Normal 20 <> [User] 
+display(6) out <> Enabled Normal 21 <> [User] 

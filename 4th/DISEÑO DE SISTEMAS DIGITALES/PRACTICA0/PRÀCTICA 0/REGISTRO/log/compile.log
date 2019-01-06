@@ -1,0 +1,8 @@
+ Compilation with file reorder...
+ File: C:\Documents and Settings\Administrador\Mis documentos\DISEÑO DE SISTEMAS DIGITALES\PRÀCTICA 0\REGISTRO.vhd
+ Compile Entity "REGISTRO"
+Error:  COMP96_0078:REGISTRO.vhd : (12, 1): Unknown identifier "PIN_NUMBERS".
+Error:  COMP96_0088:REGISTRO.vhd : (12, 1): The attribute designator must denote an attribute.
+ Compile Architecture "PRACTICA" of Entity "REGISTRO"
+Error:  COMP96_0056:REGISTRO.vhd : (35, 1): Cannot find referenced entity declaration "REGISTRO".
+ Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]

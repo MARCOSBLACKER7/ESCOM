@@ -1,0 +1,7 @@
+ Compilation with file reorder...
+ File: C:\Documents and Settings\Administrador\Mis documentos\DISEÑO DE SISTEMAS DIGITALES\PRÀCTICA 0\vhd\ALARMAS.vhd
+ Compile Entity "alarmas"
+ Compile Architecture "DSMB" of Entity "alarmas"
+ Top-Level unit detected
+ Entity  =>   alarmas
+ Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]

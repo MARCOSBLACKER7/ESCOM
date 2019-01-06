@@ -1,0 +1,24 @@
+Design: 19:00, miércoles, 14 de febrero de 2018
+Design: Opening design "C:\Documents and Settings\Administrador\Mis documentos\DISEÑO DE SISTEMAS DIGITALES\PRÀCTICA 0\vhd\ALARMAS\ALARMAS.adf"
+Compilation with file reorder...
+File: C:\Documents and Settings\Administrador\Mis documentos\DISEÑO DE SISTEMAS DIGITALES\PRÀCTICA 0\vhd\ALARMAS.vhd
+Compile Entity "alarmas"
+Compile Architecture "DSMB" of Entity "alarmas"
+Top-Level unit detected
+Entity  =>   alarmas
+Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+ELBREAD: Elaboration process.
+ELBREAD: Elaboration time 0.0 [s].
+ELBREAD: Elaboration process.
+ELBREAD: Elaboration time 0.0 [s].
+KERNEL: Main thread initiated.
+KERNEL: Kernel process initialization phase.
+ELAB2: Elaboration final pass...
+ELAB2: Elaboration final pass complete - time: 0.1 [s].
+KERNEL: Kernel process initialization done.
+19:01, miércoles, 14 de febrero de 2018
+Simulation has been initialized
+Selected Top-Level: alarmas (DSMB)
+KERNEL: stopped at time: 2 ms
+KERNEL: Simulation has finished. There are no more test vectors to simulate.
+Warning: Active-HDL(tm) Sim has reached  the maximum simulation time (2ms) allowed in any single simulation run.  The effective length of the simulation may be extended by running multiple simulations in increments of 2ms.  To upgrade your software to handle simulations greater than this time as well as VHDL source level simulation contact Aldec - sales@aldec.com

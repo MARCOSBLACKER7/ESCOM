@@ -1,0 +1,41 @@
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp VHDL Synthesis Compiler: Version 6.3 IR 35
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  REGISTRO1.vhd
+Options:    -m -yu -e10 -w100 -o2 -ygs -fP -v10 -dc22v10 -ppalce22v10-25pc/pi -b REGISTRO1.vhd -u REGISTRO1.hie
+======================================================================
+
+vhdlfe V6.3 IR 35:  VHDL parser
+Wed Apr 04 05:38:46 2018
+
+Library 'work' => directory 'lc22v10'
+Linking 'C:\ARCHIV~1\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\work\cypress.vif'.
+Library 'ieee' => directory 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work'
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+REGISTRO1.vhd (line 14, col 4):  (E10) Syntax error at/before reserved symbol 'end'.
+Error occurred within 'ENTITY' at line 4, column 16 in REGISTRO1.vhd.
+REGISTRO1.vhd (line 22, col 18):  (E0) syntax error
+Error occurred within '(' at line 22, column 9 in REGISTRO1.vhd.
+REGISTRO1.vhd (line 22, col 18):  (E68) Missing right parenthesis
+REGISTRO1.vhd (line 22, col 18):  (E18) Missing THEN.
+REGISTRO1.vhd (line 22, col 22):  (E162) Can't use 'event' here.
+REGISTRO1.vhd (line 22, col 28):  (E3) Need a '<=' or ':=' here.
+REGISTRO1.vhd (line 22, col 34):  (E59) Expected , or ;, but got )
+REGISTRO1.vhd (line 22, col 34):  (E0) syntax error
+REGISTRO1.vhd (line 45, col 12):  (E56) Expected IF, but got LOOP
+Error occurred within 'IF' at line 25, column 6 in REGISTRO1.vhd.
+REGISTRO1.vhd (line 45, col 12):  (E10) Syntax error at/before reserved symbol 'loop'.
+REGISTRO1.vhd (line 47, col 20):  Abort:  (E34) Undeclared name:  preg
