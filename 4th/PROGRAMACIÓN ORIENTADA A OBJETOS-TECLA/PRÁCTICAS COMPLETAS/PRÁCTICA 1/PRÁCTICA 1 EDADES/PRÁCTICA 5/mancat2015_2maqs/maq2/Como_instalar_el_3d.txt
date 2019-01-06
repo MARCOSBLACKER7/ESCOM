@@ -1,0 +1,13 @@
+COPAR EL ARCHIVO EN LA RUTA:
+sudo  cp  java3d-1_5_1-linux-i586.bin  //usr/lib/jvm/java-7-oracle/jre/
+
+PERMISOS ya posicionado en la carpeta
+sudo chmod +x java3d-1_5_1-linux-i586.bin
+
+
+EJECUTAR
+./java3d-1_5_1-linux-i586.bin
+
+http://www.ubuntizando.com/2013/09/15/como-habilitar-el-arranque-dual-en-equipos-con-uefi/
+
+http://www.welivesecurity.com/la-es/2014/07/04/como-tener-dual-boot-ubuntu-windows-8-uefi/
